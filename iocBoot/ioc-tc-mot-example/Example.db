@@ -1326,3 +1326,27 @@ record(waveform, "PLC:TST:MOT:SIM:03:PLC:sErrorMessage_RBV") {
   field(FTVL, "CHAR")
   field(NELM, "80")
 }
+
+record(bi, "PLC:TST:MOT:RESET_RBV") {
+  field(DESC, "Set to True to reset the PLC")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.bTCRestart?")
+  field(ZRST, "False")
+  field(ONST, "True")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+}
+
+record(bo, "PLC:TST:MOT:RESET") {
+  field(DESC, "Set to True to reset the PLC")
+  field(DTYP, "asynInt32")
+  field(ZRST, "False")
+  field(ONST, "True")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.bTCRestart=")
+  field(ZNAM, "Zero")
+  field(ONAM, "One")
+  info(autosaveFields_pass0, "VAL")
+}
