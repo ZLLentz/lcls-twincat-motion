@@ -26,6 +26,15 @@ VAR
     '}
     M3: DUT_MotionStage;
     fbMotion3: FB_MotionStage;
+    
+    {attribute 'pytmc' := '
+        pv: PLC:TST:MOT:TC:RESTART
+        field: DESC Set to True to restart TwinCAT
+        field: ZRST False
+        field: ONST True
+    '}
+    bTCRestart: BOOL;
+    fbTCRestart: TC_Restart;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[fbMotion1(stMotionStage := M1);
@@ -34,7 +43,11 @@ fbMotion3(stMotionStage := M3);
 M3.bHardwareEnable := TRUE;
 M3.bPowerSelf := TRUE;
 M3.bLimitForwardEnable := M3.Axis.NcToPlc.ActPos < 99.7;
-M3.bLimitBackwardEnable := M3.Axis.NcToPlc.ActPos > 0.2;]]></ST>
+M3.bLimitBackwardEnable := M3.Axis.NcToPlc.ActPos > 0.2;
+
+fbTCRestart(
+    NETID := '',
+    RESTART := bTCRestart);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
