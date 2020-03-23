@@ -30,8 +30,8 @@ VAR
     {attribute 'pytmc' := '
         pv: PLC:TST:MOT:TC:RESTART
         field: DESC Set to True to restart TwinCAT
-        field: ZRST False
-        field: ONST True
+        field: ZNAM False
+        field: ONAM True
     '}
     bTCRestart: BOOL;
     fbTCRestart: TC_Restart;

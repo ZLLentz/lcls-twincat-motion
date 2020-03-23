@@ -18,10 +18,10 @@
 		</SvbTask>
 		<AxisFolder Name="Library Axes"/>
 		<AxisFolder Name="Example Axes"/>
-		<Axis File="Library 1.xti" Id="1"/>
-		<Axis File="Library 2.xti" Id="2"/>
-		<Axis File="Example 1 Simulated Working.xti" Id="3"/>
-		<Axis File="Example 2 Simulated Broken.xti" Id="4"/>
-		<Axis File="Example 3 Simulated Limits.xti" Id="5"/>
+		<Axis File="Library 4.xti" Id="4"/>
+		<Axis File="Library 5.xti" Id="5"/>
+		<Axis File="Example 1 Simulated Working.xti" Id="1"/>
+		<Axis File="Example 2 Simulated Broken.xti" Id="2"/>
+		<Axis File="Example 3 Simulated Limits.xti" Id="3"/>
 	</NC>
 </TcSmItem>
