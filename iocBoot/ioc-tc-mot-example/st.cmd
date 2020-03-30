@@ -1,4 +1,4 @@
-#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.2.1/bin/rhel7-x86_64/adsIoc
+#!/reg/neh/home/mcbrowne/trunk2/ioc/common/ads-ioc/bin/rhel7-x86_64/adsIoc
 
 < envPaths
 
@@ -69,7 +69,7 @@ EthercatMCCreateController("$(MOTOR_PORT)", "$(ASYN_PORT)", "$(NUMAXES)", "$(MOV
 #define ASYN_TRACE_FLOW      0x0010
 #define ASYN_TRACE_WARNING   0x0020
 #define ASYN_TRACE_INFO      0x0040
-asynSetTraceMask("$(ASYN_PORT)", -1, 0x41)
+asynSetTraceMask("$(ASYN_PORT)", -1, 0x49)
 
 #define ASYN_TRACEIO_NODATA 0x0000
 #define ASYN_TRACEIO_ASCII  0x0001
