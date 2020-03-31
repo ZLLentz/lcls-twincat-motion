@@ -7,6 +7,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bLimitForwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bLimitForwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bLimitBackwardEnable_RBV") {
@@ -18,6 +19,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bLimitBackwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bLimitBackwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bHome_RBV") {
@@ -29,6 +31,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bHome_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bHome?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bBrakeRelease_RBV") {
@@ -40,6 +43,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bBrakeRelease_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bBrakeRelease?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bHardwareEnable_RBV") {
@@ -51,6 +55,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bHardwareEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bHardwareEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bAllForwardEnable_RBV") {
@@ -62,6 +67,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bAllForwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bAllForwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bAllBackwardEnable_RBV") {
@@ -73,6 +79,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bAllBackwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bAllBackwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bAllEnable_RBV") {
@@ -84,6 +91,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bAllEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bAllEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bGantryForwardEnable_RBV") {
@@ -95,6 +103,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bGantryForwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bGantryForwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bGantryBackwardEnable_RBV") {
@@ -106,6 +115,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bGantryBackwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bGantryBackwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bPowerSelf_RBV") {
@@ -117,6 +127,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bPowerSelf_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bPowerSelf?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(mbbi, "PLC:TST:MOT:SIM:01:PLC:nEnableMode_RBV") {
@@ -132,6 +143,7 @@ record(mbbi, "PLC:TST:MOT:SIM:01:PLC:nEnableMode_RBV") {
   field(ZRST, "ALWAYS")
   field(ONST, "NEVER")
   field(TWST, "DURING_MOTION")
+  info(archive, "VAL")
 }
 
 record(mbbi, "PLC:TST:MOT:SIM:01:PLC:nBrakeMode_RBV") {
@@ -147,6 +159,7 @@ record(mbbi, "PLC:TST:MOT:SIM:01:PLC:nBrakeMode_RBV") {
   field(ZRST, "IF_ENABLED")
   field(ONST, "IF_MOVING")
   field(TWST, "NO_BRAKE")
+  info(archive, "VAL")
 }
 
 record(mbbi, "PLC:TST:MOT:SIM:01:PLC:nHomingMode_RBV") {
@@ -168,6 +181,7 @@ record(mbbi, "PLC:TST:MOT:SIM:01:PLC:nHomingMode_RBV") {
   field(THST, "HOME_VIA_LOW")
   field(FRST, "HOME_VIA_HIGH")
   field(FVST, "ABSOLUTE_SET")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bGantryAxis_RBV") {
@@ -179,6 +193,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bGantryAxis_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bGantryAxis?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bEnable_RBV") {
@@ -190,6 +205,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bo, "PLC:TST:MOT:SIM:01:PLC:bEnable") {
@@ -199,6 +215,7 @@ record(bo, "PLC:TST:MOT:SIM:01:PLC:bEnable") {
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bReset_RBV") {
@@ -210,6 +227,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bReset_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bReset?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bo, "PLC:TST:MOT:SIM:01:PLC:bReset") {
@@ -219,6 +237,7 @@ record(bo, "PLC:TST:MOT:SIM:01:PLC:bReset") {
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bExecute_RBV") {
@@ -230,6 +249,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bExecute_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bExecute?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bo, "PLC:TST:MOT:SIM:01:PLC:bExecute") {
@@ -239,6 +259,7 @@ record(bo, "PLC:TST:MOT:SIM:01:PLC:bExecute") {
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(longin, "PLC:TST:MOT:SIM:01:PLC:nCommand_RBV") {
@@ -248,6 +269,7 @@ record(longin, "PLC:TST:MOT:SIM:01:PLC:nCommand_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.nCommand?")
+  info(archive, "VAL")
 }
 
 record(longout, "PLC:TST:MOT:SIM:01:PLC:nCommand") {
@@ -255,6 +277,7 @@ record(longout, "PLC:TST:MOT:SIM:01:PLC:nCommand") {
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M1.nCommand=")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(longin, "PLC:TST:MOT:SIM:01:PLC:nCmdData_RBV") {
@@ -264,6 +287,7 @@ record(longin, "PLC:TST:MOT:SIM:01:PLC:nCmdData_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.nCmdData?")
+  info(archive, "VAL")
 }
 
 record(longout, "PLC:TST:MOT:SIM:01:PLC:nCmdData") {
@@ -271,6 +295,7 @@ record(longout, "PLC:TST:MOT:SIM:01:PLC:nCmdData") {
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M1.nCmdData=")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:01:PLC:fPosition_RBV") {
@@ -282,6 +307,7 @@ record(ai, "PLC:TST:MOT:SIM:01:PLC:fPosition_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.fPosition?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:01:PLC:fPosition") {
@@ -290,6 +316,7 @@ record(ao, "PLC:TST:MOT:SIM:01:PLC:fPosition") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M1.fPosition=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:01:PLC:fVelocity_RBV") {
@@ -301,6 +328,7 @@ record(ai, "PLC:TST:MOT:SIM:01:PLC:fVelocity_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.fVelocity?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:01:PLC:fVelocity") {
@@ -309,6 +337,7 @@ record(ao, "PLC:TST:MOT:SIM:01:PLC:fVelocity") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M1.fVelocity=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:01:PLC:fAcceleration_RBV") {
@@ -320,6 +349,7 @@ record(ai, "PLC:TST:MOT:SIM:01:PLC:fAcceleration_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.fAcceleration?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:01:PLC:fAcceleration") {
@@ -328,6 +358,7 @@ record(ao, "PLC:TST:MOT:SIM:01:PLC:fAcceleration") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M1.fAcceleration=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:01:PLC:fDeceleration_RBV") {
@@ -339,6 +370,7 @@ record(ai, "PLC:TST:MOT:SIM:01:PLC:fDeceleration_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.fDeceleration?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:01:PLC:fDeceleration") {
@@ -347,6 +379,7 @@ record(ao, "PLC:TST:MOT:SIM:01:PLC:fDeceleration") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M1.fDeceleration=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:01:PLC:fHomePosition_RBV") {
@@ -358,6 +391,7 @@ record(ai, "PLC:TST:MOT:SIM:01:PLC:fHomePosition_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.fHomePosition?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:01:PLC:fHomePosition") {
@@ -366,6 +400,7 @@ record(ao, "PLC:TST:MOT:SIM:01:PLC:fHomePosition") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M1.fHomePosition=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(longin, "PLC:TST:MOT:SIM:01:PLC:nMotionAxisID_RBV") {
@@ -375,6 +410,7 @@ record(longin, "PLC:TST:MOT:SIM:01:PLC:nMotionAxisID_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.nMotionAxisID?")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bEnableDone_RBV") {
@@ -386,6 +422,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bEnableDone_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bEnableDone?")
   field(ZNAM, "TRUE")
   field(ONAM, "FALSE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bBusy_RBV") {
@@ -397,6 +434,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bBusy_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bBusy?")
   field(ZNAM, "TRUE")
   field(ONAM, "FALSE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bDone_RBV") {
@@ -408,6 +446,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bDone_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bDone?")
   field(ZNAM, "TRUE")
   field(ONAM, "FALSE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:01:PLC:bError_RBV") {
@@ -419,6 +458,7 @@ record(bi, "PLC:TST:MOT:SIM:01:PLC:bError_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.bError?")
   field(ZNAM, "TRUE")
   field(ONAM, "FALSE")
+  info(archive, "VAL")
 }
 
 record(longin, "PLC:TST:MOT:SIM:01:PLC:nErrorId_RBV") {
@@ -428,6 +468,7 @@ record(longin, "PLC:TST:MOT:SIM:01:PLC:nErrorId_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.nErrorId?")
+  info(archive, "VAL")
 }
 
 record(waveform, "PLC:TST:MOT:SIM:01:PLC:sErrorMessage_RBV") {
@@ -439,6 +480,7 @@ record(waveform, "PLC:TST:MOT:SIM:01:PLC:sErrorMessage_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M1.sErrorMessage?")
   field(FTVL, "CHAR")
   field(NELM, "80")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bLimitForwardEnable_RBV") {
@@ -450,6 +492,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bLimitForwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bLimitForwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bLimitBackwardEnable_RBV") {
@@ -461,6 +504,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bLimitBackwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bLimitBackwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bHome_RBV") {
@@ -472,6 +516,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bHome_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bHome?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bBrakeRelease_RBV") {
@@ -483,6 +528,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bBrakeRelease_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bBrakeRelease?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bHardwareEnable_RBV") {
@@ -494,6 +540,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bHardwareEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bHardwareEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bAllForwardEnable_RBV") {
@@ -505,6 +552,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bAllForwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bAllForwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bAllBackwardEnable_RBV") {
@@ -516,6 +564,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bAllBackwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bAllBackwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bAllEnable_RBV") {
@@ -527,6 +576,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bAllEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bAllEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bGantryForwardEnable_RBV") {
@@ -538,6 +588,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bGantryForwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bGantryForwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bGantryBackwardEnable_RBV") {
@@ -549,6 +600,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bGantryBackwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bGantryBackwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bPowerSelf_RBV") {
@@ -560,6 +612,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bPowerSelf_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bPowerSelf?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(mbbi, "PLC:TST:MOT:SIM:02:PLC:nEnableMode_RBV") {
@@ -575,6 +628,7 @@ record(mbbi, "PLC:TST:MOT:SIM:02:PLC:nEnableMode_RBV") {
   field(ZRST, "ALWAYS")
   field(ONST, "NEVER")
   field(TWST, "DURING_MOTION")
+  info(archive, "VAL")
 }
 
 record(mbbi, "PLC:TST:MOT:SIM:02:PLC:nBrakeMode_RBV") {
@@ -590,6 +644,7 @@ record(mbbi, "PLC:TST:MOT:SIM:02:PLC:nBrakeMode_RBV") {
   field(ZRST, "IF_ENABLED")
   field(ONST, "IF_MOVING")
   field(TWST, "NO_BRAKE")
+  info(archive, "VAL")
 }
 
 record(mbbi, "PLC:TST:MOT:SIM:02:PLC:nHomingMode_RBV") {
@@ -611,6 +666,7 @@ record(mbbi, "PLC:TST:MOT:SIM:02:PLC:nHomingMode_RBV") {
   field(THST, "HOME_VIA_LOW")
   field(FRST, "HOME_VIA_HIGH")
   field(FVST, "ABSOLUTE_SET")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bGantryAxis_RBV") {
@@ -622,6 +678,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bGantryAxis_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bGantryAxis?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bEnable_RBV") {
@@ -633,6 +690,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bo, "PLC:TST:MOT:SIM:02:PLC:bEnable") {
@@ -642,6 +700,7 @@ record(bo, "PLC:TST:MOT:SIM:02:PLC:bEnable") {
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bReset_RBV") {
@@ -653,6 +712,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bReset_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bReset?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bo, "PLC:TST:MOT:SIM:02:PLC:bReset") {
@@ -662,6 +722,7 @@ record(bo, "PLC:TST:MOT:SIM:02:PLC:bReset") {
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bExecute_RBV") {
@@ -673,6 +734,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bExecute_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bExecute?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bo, "PLC:TST:MOT:SIM:02:PLC:bExecute") {
@@ -682,6 +744,7 @@ record(bo, "PLC:TST:MOT:SIM:02:PLC:bExecute") {
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(longin, "PLC:TST:MOT:SIM:02:PLC:nCommand_RBV") {
@@ -691,6 +754,7 @@ record(longin, "PLC:TST:MOT:SIM:02:PLC:nCommand_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.nCommand?")
+  info(archive, "VAL")
 }
 
 record(longout, "PLC:TST:MOT:SIM:02:PLC:nCommand") {
@@ -698,6 +762,7 @@ record(longout, "PLC:TST:MOT:SIM:02:PLC:nCommand") {
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M2.nCommand=")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(longin, "PLC:TST:MOT:SIM:02:PLC:nCmdData_RBV") {
@@ -707,6 +772,7 @@ record(longin, "PLC:TST:MOT:SIM:02:PLC:nCmdData_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.nCmdData?")
+  info(archive, "VAL")
 }
 
 record(longout, "PLC:TST:MOT:SIM:02:PLC:nCmdData") {
@@ -714,6 +780,7 @@ record(longout, "PLC:TST:MOT:SIM:02:PLC:nCmdData") {
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M2.nCmdData=")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:02:PLC:fPosition_RBV") {
@@ -725,6 +792,7 @@ record(ai, "PLC:TST:MOT:SIM:02:PLC:fPosition_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.fPosition?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:02:PLC:fPosition") {
@@ -733,6 +801,7 @@ record(ao, "PLC:TST:MOT:SIM:02:PLC:fPosition") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M2.fPosition=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:02:PLC:fVelocity_RBV") {
@@ -744,6 +813,7 @@ record(ai, "PLC:TST:MOT:SIM:02:PLC:fVelocity_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.fVelocity?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:02:PLC:fVelocity") {
@@ -752,6 +822,7 @@ record(ao, "PLC:TST:MOT:SIM:02:PLC:fVelocity") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M2.fVelocity=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:02:PLC:fAcceleration_RBV") {
@@ -763,6 +834,7 @@ record(ai, "PLC:TST:MOT:SIM:02:PLC:fAcceleration_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.fAcceleration?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:02:PLC:fAcceleration") {
@@ -771,6 +843,7 @@ record(ao, "PLC:TST:MOT:SIM:02:PLC:fAcceleration") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M2.fAcceleration=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:02:PLC:fDeceleration_RBV") {
@@ -782,6 +855,7 @@ record(ai, "PLC:TST:MOT:SIM:02:PLC:fDeceleration_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.fDeceleration?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:02:PLC:fDeceleration") {
@@ -790,6 +864,7 @@ record(ao, "PLC:TST:MOT:SIM:02:PLC:fDeceleration") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M2.fDeceleration=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:02:PLC:fHomePosition_RBV") {
@@ -801,6 +876,7 @@ record(ai, "PLC:TST:MOT:SIM:02:PLC:fHomePosition_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.fHomePosition?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:02:PLC:fHomePosition") {
@@ -809,6 +885,7 @@ record(ao, "PLC:TST:MOT:SIM:02:PLC:fHomePosition") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M2.fHomePosition=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(longin, "PLC:TST:MOT:SIM:02:PLC:nMotionAxisID_RBV") {
@@ -818,6 +895,7 @@ record(longin, "PLC:TST:MOT:SIM:02:PLC:nMotionAxisID_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.nMotionAxisID?")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bEnableDone_RBV") {
@@ -829,6 +907,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bEnableDone_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bEnableDone?")
   field(ZNAM, "TRUE")
   field(ONAM, "FALSE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bBusy_RBV") {
@@ -840,6 +919,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bBusy_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bBusy?")
   field(ZNAM, "TRUE")
   field(ONAM, "FALSE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bDone_RBV") {
@@ -851,6 +931,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bDone_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bDone?")
   field(ZNAM, "TRUE")
   field(ONAM, "FALSE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:02:PLC:bError_RBV") {
@@ -862,6 +943,7 @@ record(bi, "PLC:TST:MOT:SIM:02:PLC:bError_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.bError?")
   field(ZNAM, "TRUE")
   field(ONAM, "FALSE")
+  info(archive, "VAL")
 }
 
 record(longin, "PLC:TST:MOT:SIM:02:PLC:nErrorId_RBV") {
@@ -871,6 +953,7 @@ record(longin, "PLC:TST:MOT:SIM:02:PLC:nErrorId_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.nErrorId?")
+  info(archive, "VAL")
 }
 
 record(waveform, "PLC:TST:MOT:SIM:02:PLC:sErrorMessage_RBV") {
@@ -882,6 +965,7 @@ record(waveform, "PLC:TST:MOT:SIM:02:PLC:sErrorMessage_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M2.sErrorMessage?")
   field(FTVL, "CHAR")
   field(NELM, "80")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bLimitForwardEnable_RBV") {
@@ -893,6 +977,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bLimitForwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bLimitForwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bLimitBackwardEnable_RBV") {
@@ -904,6 +989,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bLimitBackwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bLimitBackwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bHome_RBV") {
@@ -915,6 +1001,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bHome_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bHome?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bBrakeRelease_RBV") {
@@ -926,6 +1013,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bBrakeRelease_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bBrakeRelease?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bHardwareEnable_RBV") {
@@ -937,6 +1025,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bHardwareEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bHardwareEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bAllForwardEnable_RBV") {
@@ -948,6 +1037,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bAllForwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bAllForwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bAllBackwardEnable_RBV") {
@@ -959,6 +1049,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bAllBackwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bAllBackwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bAllEnable_RBV") {
@@ -970,6 +1061,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bAllEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bAllEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bGantryForwardEnable_RBV") {
@@ -981,6 +1073,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bGantryForwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bGantryForwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bGantryBackwardEnable_RBV") {
@@ -992,6 +1085,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bGantryBackwardEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bGantryBackwardEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bPowerSelf_RBV") {
@@ -1003,6 +1097,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bPowerSelf_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bPowerSelf?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(mbbi, "PLC:TST:MOT:SIM:03:PLC:nEnableMode_RBV") {
@@ -1018,6 +1113,7 @@ record(mbbi, "PLC:TST:MOT:SIM:03:PLC:nEnableMode_RBV") {
   field(ZRST, "ALWAYS")
   field(ONST, "NEVER")
   field(TWST, "DURING_MOTION")
+  info(archive, "VAL")
 }
 
 record(mbbi, "PLC:TST:MOT:SIM:03:PLC:nBrakeMode_RBV") {
@@ -1033,6 +1129,7 @@ record(mbbi, "PLC:TST:MOT:SIM:03:PLC:nBrakeMode_RBV") {
   field(ZRST, "IF_ENABLED")
   field(ONST, "IF_MOVING")
   field(TWST, "NO_BRAKE")
+  info(archive, "VAL")
 }
 
 record(mbbi, "PLC:TST:MOT:SIM:03:PLC:nHomingMode_RBV") {
@@ -1054,6 +1151,7 @@ record(mbbi, "PLC:TST:MOT:SIM:03:PLC:nHomingMode_RBV") {
   field(THST, "HOME_VIA_LOW")
   field(FRST, "HOME_VIA_HIGH")
   field(FVST, "ABSOLUTE_SET")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bGantryAxis_RBV") {
@@ -1065,6 +1163,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bGantryAxis_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bGantryAxis?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bEnable_RBV") {
@@ -1076,6 +1175,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bEnable_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bEnable?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bo, "PLC:TST:MOT:SIM:03:PLC:bEnable") {
@@ -1085,6 +1185,7 @@ record(bo, "PLC:TST:MOT:SIM:03:PLC:bEnable") {
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bReset_RBV") {
@@ -1096,6 +1197,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bReset_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bReset?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bo, "PLC:TST:MOT:SIM:03:PLC:bReset") {
@@ -1105,6 +1207,7 @@ record(bo, "PLC:TST:MOT:SIM:03:PLC:bReset") {
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bExecute_RBV") {
@@ -1116,6 +1219,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bExecute_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bExecute?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
+  info(archive, "VAL")
 }
 
 record(bo, "PLC:TST:MOT:SIM:03:PLC:bExecute") {
@@ -1125,6 +1229,7 @@ record(bo, "PLC:TST:MOT:SIM:03:PLC:bExecute") {
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(longin, "PLC:TST:MOT:SIM:03:PLC:nCommand_RBV") {
@@ -1134,6 +1239,7 @@ record(longin, "PLC:TST:MOT:SIM:03:PLC:nCommand_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.nCommand?")
+  info(archive, "VAL")
 }
 
 record(longout, "PLC:TST:MOT:SIM:03:PLC:nCommand") {
@@ -1141,6 +1247,7 @@ record(longout, "PLC:TST:MOT:SIM:03:PLC:nCommand") {
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M3.nCommand=")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(longin, "PLC:TST:MOT:SIM:03:PLC:nCmdData_RBV") {
@@ -1150,6 +1257,7 @@ record(longin, "PLC:TST:MOT:SIM:03:PLC:nCmdData_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.nCmdData?")
+  info(archive, "VAL")
 }
 
 record(longout, "PLC:TST:MOT:SIM:03:PLC:nCmdData") {
@@ -1157,6 +1265,7 @@ record(longout, "PLC:TST:MOT:SIM:03:PLC:nCmdData") {
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M3.nCmdData=")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:03:PLC:fPosition_RBV") {
@@ -1168,6 +1277,7 @@ record(ai, "PLC:TST:MOT:SIM:03:PLC:fPosition_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.fPosition?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:03:PLC:fPosition") {
@@ -1176,6 +1286,7 @@ record(ao, "PLC:TST:MOT:SIM:03:PLC:fPosition") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M3.fPosition=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:03:PLC:fVelocity_RBV") {
@@ -1187,6 +1298,7 @@ record(ai, "PLC:TST:MOT:SIM:03:PLC:fVelocity_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.fVelocity?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:03:PLC:fVelocity") {
@@ -1195,6 +1307,7 @@ record(ao, "PLC:TST:MOT:SIM:03:PLC:fVelocity") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M3.fVelocity=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:03:PLC:fAcceleration_RBV") {
@@ -1206,6 +1319,7 @@ record(ai, "PLC:TST:MOT:SIM:03:PLC:fAcceleration_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.fAcceleration?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:03:PLC:fAcceleration") {
@@ -1214,6 +1328,7 @@ record(ao, "PLC:TST:MOT:SIM:03:PLC:fAcceleration") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M3.fAcceleration=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:03:PLC:fDeceleration_RBV") {
@@ -1225,6 +1340,7 @@ record(ai, "PLC:TST:MOT:SIM:03:PLC:fDeceleration_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.fDeceleration?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:03:PLC:fDeceleration") {
@@ -1233,6 +1349,7 @@ record(ao, "PLC:TST:MOT:SIM:03:PLC:fDeceleration") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M3.fDeceleration=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(ai, "PLC:TST:MOT:SIM:03:PLC:fHomePosition_RBV") {
@@ -1244,6 +1361,7 @@ record(ai, "PLC:TST:MOT:SIM:03:PLC:fHomePosition_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.fHomePosition?")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
 }
 
 record(ao, "PLC:TST:MOT:SIM:03:PLC:fHomePosition") {
@@ -1252,6 +1370,7 @@ record(ao, "PLC:TST:MOT:SIM:03:PLC:fHomePosition") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=852/Main.M3.fHomePosition=")
   field(PREC, "3")
   info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
 }
 
 record(longin, "PLC:TST:MOT:SIM:03:PLC:nMotionAxisID_RBV") {
@@ -1261,6 +1380,7 @@ record(longin, "PLC:TST:MOT:SIM:03:PLC:nMotionAxisID_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.nMotionAxisID?")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bEnableDone_RBV") {
@@ -1272,6 +1392,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bEnableDone_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bEnableDone?")
   field(ZNAM, "TRUE")
   field(ONAM, "FALSE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bBusy_RBV") {
@@ -1283,6 +1404,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bBusy_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bBusy?")
   field(ZNAM, "TRUE")
   field(ONAM, "FALSE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bDone_RBV") {
@@ -1294,6 +1416,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bDone_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bDone?")
   field(ZNAM, "TRUE")
   field(ONAM, "FALSE")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:SIM:03:PLC:bError_RBV") {
@@ -1305,6 +1428,7 @@ record(bi, "PLC:TST:MOT:SIM:03:PLC:bError_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.bError?")
   field(ZNAM, "TRUE")
   field(ONAM, "FALSE")
+  info(archive, "VAL")
 }
 
 record(longin, "PLC:TST:MOT:SIM:03:PLC:nErrorId_RBV") {
@@ -1314,6 +1438,7 @@ record(longin, "PLC:TST:MOT:SIM:03:PLC:nErrorId_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.nErrorId?")
+  info(archive, "VAL")
 }
 
 record(waveform, "PLC:TST:MOT:SIM:03:PLC:sErrorMessage_RBV") {
@@ -1325,6 +1450,7 @@ record(waveform, "PLC:TST:MOT:SIM:03:PLC:sErrorMessage_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.M3.sErrorMessage?")
   field(FTVL, "CHAR")
   field(NELM, "80")
+  info(archive, "VAL")
 }
 
 record(bi, "PLC:TST:MOT:REBOOT_RBV") {
@@ -1336,6 +1462,7 @@ record(bi, "PLC:TST:MOT:REBOOT_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=852/POLL_RATE=1/Main.bReboot?")
   field(ZNAM, "False")
   field(ONAM, "True")
+  info(archive, "VAL")
 }
 
 record(bo, "PLC:TST:MOT:REBOOT") {
@@ -1345,4 +1472,5 @@ record(bo, "PLC:TST:MOT:REBOOT") {
   field(ZNAM, "False")
   field(ONAM, "True")
   info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
 }
