@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_StatePMPSEnablesND" Id="{d098ccc9-7db0-41da-97e3-aba758c57f5d}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_StatePMPSEnablesND
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_StatePMPSEnablesND
 (*
     Function block to set virtual limit enables using MC_POWER for multidimensional state movers.
     It is a building block not meant for use outside of lcls-twintcat-motion.
@@ -88,7 +89,8 @@ FOR nIter := 1 TO nActiveMotorCount DO
         bBackwardEnabled=>abBackwardEnabled[nIter],
         bValidGoal=>abValidGoal[nIter],
     );
-END_FOR]]></ST>
+END_FOR
+]]></ST>
       </Implementation>
     </Action>
     <Action Name="RunFastFaults" Id="{6106ff0e-c9c3-479a-9da2-c952ec5198ee}">
@@ -110,7 +112,8 @@ ffProgrammerError(
     i_Desc:='Programmer error picking motor count',
     i_TypeCode:=E_MotionFFType.INTERNAL_ERROR,
     io_fbFFHWO:=fbFFHWO,
-);]]></ST>
+);
+]]></ST>
       </Implementation>
     </Action>
   </POU>

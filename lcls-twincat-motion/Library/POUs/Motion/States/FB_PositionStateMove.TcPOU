@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStateMove" Id="{a935a12e-6ee3-4ebb-8c29-e9b23b7cef37}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionStateMove
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionStateMove
 (*
     Request a move to a particular state from an axis controlled via EPICS
     pytmc PVs here only exposed if using directly and not through another states function block.
@@ -99,7 +100,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Veto the move for uninitialized and unsafe states
+      <ST><![CDATA[
+// Veto the move for uninitialized and unsafe states
 bAllowMove := stPositionState.bMoveOk AND stPositionState.bValid AND stPositionState.bUpdated;
 
 rtExec(CLK:=bExecute);
@@ -143,7 +145,8 @@ IF nLatchAllowErrorID <> 0 OR (bExecute AND NOT bAllowMove) THEN
 END_IF
 
 // This can be useful if we're running this FB standalone for some reason
-bAtState := F_AtPositionState(stMotionStage:=stMotionStage, stPositionState:=stPositionState);]]></ST>
+bAtState := F_AtPositionState(stMotionStage:=stMotionStage, stPositionState:=stPositionState);
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

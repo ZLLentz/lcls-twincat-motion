@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_CauseNCError" Id="{d8a15cf9-c36d-4b61-8d5a-347e8910728f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_CauseNCError
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_CauseNCError
 (*
     Simulate an NC error.
     This will look like a real NC error for everyone, including TwinCAT itself.

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_RawCountConverter" Id="{6c81e7a1-f014-4b94-98e4-ea682be9540b}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_RawCountConverter
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_RawCountConverter
 (*
     Utility function block for converting raw counts to EGU and back
 *)
@@ -27,10 +28,12 @@ VAR_OUTPUT
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF stParameters.fEncScaleFactorInternal <> 0 THEN
+      <ST><![CDATA[
+IF stParameters.fEncScaleFactorInternal <> 0 THEN
     nCountGet := LREAL_TO_UDINT((fPosCheck - stParameters.fEncOffset) / stParameters.fEncScaleFactorInternal);
     fPosGet := nCountCheck * stParameters.fEncScaleFactorInternal + stParameters.fEncOffset;
-END_IF]]></ST>
+END_IF
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

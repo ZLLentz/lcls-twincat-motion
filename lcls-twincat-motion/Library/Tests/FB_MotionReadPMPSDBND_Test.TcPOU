@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_MotionReadPMPSDBND_Test" Id="{768adf5e-3185-4edf-bf49-8d32e494af46}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_MotionReadPMPSDBND_Test EXTENDS TcUnit.FB_TestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_MotionReadPMPSDBND_Test EXTENDS TcUnit.FB_TestSuite
 (*
     We test the actual db read in the pmps lib
     Here, we test that the correct keys are ready for the read based on the inputs.
@@ -47,7 +48,8 @@ TestHalfFull();
 ]]></ST>
     </Implementation>
     <Method Name="TestBackfill" Id="{6760dcd8-2b9b-46e0-8c98-6abb91b3d805}">
-      <Declaration><![CDATA[METHOD TestBackfill
+      <Declaration><![CDATA[
+METHOD TestBackfill
 VAR_INST
     fbRead: FB_MotionReadPMPSDBND;
     astPositionState: ARRAY[1..MotionConstants.MAX_STATE_MOTORS] OF ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
@@ -87,11 +89,13 @@ AssertEquals_BOOL(
     Message:='bBeamParamsLoaded of motor 3 state 2 not backfilled',
 );
 
-TEST_FINISHED();]]></ST>
+TEST_FINISHED();
+]]></ST>
       </Implementation>
     </Method>
     <Method Name="TestDupe" Id="{4c361cc1-2632-4b23-99ee-f0de0a75607c}">
-      <Declaration><![CDATA[METHOD TestDupe
+      <Declaration><![CDATA[
+METHOD TestDupe
 VAR_INST
     fbRead: FB_MotionReadPMPSDBND;
     astPositionState: ARRAY[1..MotionConstants.MAX_STATE_MOTORS] OF ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
@@ -123,11 +127,13 @@ FOR nIter := 0 TO GeneralConstants.MAX_STATES DO
     );
 END_FOR
 
-TEST_FINISHED();]]></ST>
+TEST_FINISHED();
+]]></ST>
       </Implementation>
     </Method>
     <Method Name="TestHalfFull" Id="{ba25c1f7-f954-45b5-a656-97aca6a31871}">
-      <Declaration><![CDATA[METHOD TestHalfFull
+      <Declaration><![CDATA[
+METHOD TestHalfFull
 VAR_INST
     fbRead: FB_MotionReadPMPSDBND;
     astPositionState: ARRAY[1..MotionConstants.MAX_STATE_MOTORS] OF ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
@@ -164,11 +170,13 @@ FOR nIter := 1 TO GeneralConstants.MAX_STATES / 2 DO
     );
 END_FOR
 
-TEST_FINISHED();]]></ST>
+TEST_FINISHED();
+]]></ST>
       </Implementation>
     </Method>
     <Method Name="TestNonsense" Id="{c01adc7e-261b-43ff-9bec-c68777bcbe94}">
-      <Declaration><![CDATA[METHOD TestNonsense
+      <Declaration><![CDATA[
+METHOD TestNonsense
 VAR_INST
     fbRead: FB_MotionReadPMPSDBND;
     astPositionState: ARRAY[1..MotionConstants.MAX_STATE_MOTORS] OF ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
@@ -207,11 +215,13 @@ FOR nIter := 1 TO GeneralConstants.MAX_STATES DO
     );
 END_FOR
 
-TEST_FINISHED();]]></ST>
+TEST_FINISHED();
+]]></ST>
       </Implementation>
     </Method>
     <Method Name="TestSolo" Id="{e199a4d6-9d1e-4771-ab3f-3343cad2747d}">
-      <Declaration><![CDATA[METHOD TestSolo
+      <Declaration><![CDATA[
+METHOD TestSolo
 VAR_INST
     fbRead: FB_MotionReadPMPSDBND;
     astPositionState: ARRAY[1..MotionConstants.MAX_STATE_MOTORS] OF ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
@@ -248,11 +258,13 @@ FOR nIter := 1 TO GeneralConstants.MAX_STATES DO
     );
 END_FOR
 
-TEST_FINISHED();]]></ST>
+TEST_FINISHED();
+]]></ST>
       </Implementation>
     </Method>
     <Method Name="TestTrio" Id="{8ecf176a-1aaf-4dbd-91e3-61156428d27d}">
-      <Declaration><![CDATA[METHOD TestTrio
+      <Declaration><![CDATA[
+METHOD TestTrio
 VAR_INST
     fbRead: FB_MotionReadPMPSDBND;
     astPositionState: ARRAY[1..MotionConstants.MAX_STATE_MOTORS] OF ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
@@ -291,7 +303,8 @@ FOR nIter := 1 TO GeneralConstants.MAX_STATES DO
     );
 END_FOR
 
-TEST_FINISHED();]]></ST>
+TEST_FINISHED();
+]]></ST>
       </Implementation>
     </Method>
   </POU>

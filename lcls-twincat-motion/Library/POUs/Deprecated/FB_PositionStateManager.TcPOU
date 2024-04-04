@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStateManager" Id="{925eb9bb-c0f7-4b79-a387-ef7d0fb5ed46}" SpecialFunc="None">
-    <Declaration><![CDATA[{attribute 'obsolete' := 'Use FB_PositionState1D instead'}
+    <Declaration><![CDATA[
+{attribute 'obsolete' := 'Use FB_PositionState1D instead'}
 FUNCTION_BLOCK FB_PositionStateManager
 (*
     Handles EPICS moves between multiple states for a single axis
@@ -90,9 +91,11 @@ VAR
     bInnerReset: BOOL;
     rtReset: R_TRIG;
     bMoveRequested: BOOL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Reset just goes through the first-cycle init again
+      <ST><![CDATA[
+// Reset just goes through the first-cycle init again
 rtReset(CLK:=bReset);
 IF rtReset.Q THEN
     bInit := FALSE;
@@ -190,7 +193,8 @@ END_IF
 IF NOT bInit THEN
     bInit := TRUE;
     bInnerReset := FALSE;
-END_IF]]></ST>
+END_IF
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionState1D_InOut" Id="{94f547a1-18bb-4bce-bb1b-9e54c58a7871}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionState1D_InOut
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionState1D_InOut
 (*
     An example and usable drop-in instance for a 1D state device with just an IN and an OUT state.
 *)
@@ -62,7 +63,8 @@ fbPositionState1D(
 
 // Send updates made on the array back to the inputs (VAR_IN_OUT) for maximum clarity
 stOut := astPositionState[E_EpicsInOut.OUT];
-stIn := astPositionState[E_EpicsInOut.IN];]]></ST>
+stIn := astPositionState[E_EpicsInOut.IN];
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

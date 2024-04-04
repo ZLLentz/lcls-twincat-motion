@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_NCErrorFFO_Test" Id="{a14def3e-cd38-464e-aab5-e8acc073b3c5}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_NCErrorFFO_Test EXTENDS TcUnit.FB_TestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_NCErrorFFO_Test EXTENDS TcUnit.FB_TestSuite
 (*
     Test the following related FBs:
     - FB_NCErrorFFO
@@ -61,16 +62,19 @@ END_IF
 tonTimer(
     IN:=TRUE,
     PT:=T#5s,
-);]]></ST>
+);
+]]></ST>
     </Implementation>
     <Method Name="TestEnc" Id="{a1e8e2ae-676f-484a-ab92-162f96da52ce}">
-      <Declaration><![CDATA[METHOD TestEnc
+      <Declaration><![CDATA[
+METHOD TestEnc
 VAR_INPUT
     nTestID: UINT;
 END_VAR
 VAR_INST
     nState: UINT;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestEncError');
@@ -134,7 +138,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestNC" Id="{c5dfb7df-a894-4064-9668-ebc3e9b9e3a0}">
-      <Declaration><![CDATA[METHOD TestNC
+      <Declaration><![CDATA[
+METHOD TestNC
 VAR_INPUT
     nTestID: UINT;
 END_VAR

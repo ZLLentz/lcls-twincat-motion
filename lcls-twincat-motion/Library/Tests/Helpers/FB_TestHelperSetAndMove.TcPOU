@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_TestHelperSetAndMove" Id="{c3a15660-72b8-4c59-95d3-f594536d1c39}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_TestHelperSetAndMove
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_TestHelperSetAndMove
 (*
     Set an stMotionStage to a start position, then cause a move.
     On rising edge of bExecute, errors are cleared, the user enable is set to FALSE, and the position is set.

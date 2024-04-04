@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_StatePMPSEnables" Id="{66c1f154-c1c4-41f1-978a-cd2e468c0ec0}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_StatePMPSEnables
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_StatePMPSEnables
 (*
     Function block to set virtual limit enables using MC_POWER for single dimensional state movers.
     It is a building block not meant for use outside of lcls-twintcat-motion.
@@ -47,7 +48,8 @@ VAR
     fLowerPos: LREAL;
     fUpperPos: LREAL;
     ffNoGoal: FB_FastFault;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[
 GetBounds();
@@ -105,7 +107,8 @@ IF nGoalStateIndex > 0 AND nGoalStateIndex <= GeneralConstants.MAX_STATES THEN
     END_IF
 ELSE
     bValidGoal := FALSE;
-END_IF]]></ST>
+END_IF
+]]></ST>
       </Implementation>
     </Action>
     <Action Name="RunFastFaults" Id="{11ee33e8-340c-460a-b8fd-d677fe1d0eeb}">

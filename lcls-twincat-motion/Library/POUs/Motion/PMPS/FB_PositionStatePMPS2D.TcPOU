@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStatePMPS2D" Id="{9dffd600-2d32-4e33-bb6b-8aab4cc29ee5}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionStatePMPS2D
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionStatePMPS2D
 (*
     2-Dimensional position state function block with PMPS.
 

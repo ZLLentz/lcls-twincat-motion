@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_LogMotionError" Id="{9500aa77-a355-4e4c-85a0-c8788ac59e2a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_LogMotionError
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_LogMotionError
 (*
     If the motion struct has an error, log it.
 

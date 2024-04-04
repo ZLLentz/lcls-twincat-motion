@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStateBase_WithPMPS" Id="{b19911a0-9c0b-43b8-8cb3-dd3526519e98}" SpecialFunc="None">
-    <Declaration><![CDATA[{attribute 'obsolete' := 'Use FB_PositionStatePMPS1D instead'}
+    <Declaration><![CDATA[
+{attribute 'obsolete' := 'Use FB_PositionStatePMPS1D instead'}
 FUNCTION_BLOCK FB_PositionStateBase_WithPMPS EXTENDS FB_PositionStateBase
 (*
     Handles EPICS moves between multiple states for a single axis with PMPS.
@@ -32,7 +33,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(*
+      <ST><![CDATA[
+(*
     Subclass me, define enums to translate setState and getState, call Exec
 
     Example:
@@ -42,17 +44,21 @@ END_VAR
     Exec();
     enumGet := getState;
     enumSet := setState;
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
     <Action Name="Exec" Id="{70fa5ddc-d7df-4f92-a75a-307938fa5e37}">
       <Implementation>
-        <ST><![CDATA[StateHandler();
-PMPSHandler();]]></ST>
+        <ST><![CDATA[
+StateHandler();
+PMPSHandler();
+]]></ST>
       </Implementation>
     </Action>
     <Action Name="PMPSHandler" Id="{71f52474-b96e-45d5-8d7a-c1880d7070ba}">
       <Implementation>
-        <ST><![CDATA[fbStatePMPS(
+        <ST><![CDATA[
+fbStatePMPS(
     fbArbiter:=fbArbiter,
     fbFFHWO:=fbFFHWO,
     stMotionStage:=stMotionStage,
@@ -72,7 +78,8 @@ PMPSHandler();]]></ST>
 fbEncErrFFO(
     stMotionStage:=stMotionStage,
     fbFFHWO:=fbFFHWO,
-    bAutoReset:=TRUE);]]></ST>
+    bAutoReset:=TRUE);
+]]></ST>
       </Implementation>
     </Action>
   </POU>

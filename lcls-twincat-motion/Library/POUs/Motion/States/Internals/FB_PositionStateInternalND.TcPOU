@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStateInternalND" Id="{2770a312-c46b-42e8-8f61-76e005039b82}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionStateInternalND
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionStateInternalND
 (*
     Given a standard ND state setup, call all the required state management FBs.
 *)
@@ -27,7 +28,8 @@ FOR nIterMotors := 1 TO MotionConstants.MAX_STATE_MOTORS DO
             stPositionState:=astPositionState[nIterMotors][nIterStates],
         );
     END_FOR
-END_FOR]]></ST>
+END_FOR
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

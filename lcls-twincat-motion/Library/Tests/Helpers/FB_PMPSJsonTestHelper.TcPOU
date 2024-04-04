@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PMPSJsonTestHelper" Id="{dc71dc31-2d0b-4062-b2d3-b26324b3473f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PMPSJsonTestHelper
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PMPSJsonTestHelper
 (*
     Create a JSON doc in memory to match the input structs
     Assumes 1 device for simplicity
@@ -145,7 +146,8 @@ PMPS_GVL.BP_jsonDoc := jsonRoot;
 ]]></ST>
     </Implementation>
     <Method Name="bitmaskToString" Id="{a74cbfbf-040a-4efc-a4a9-225eb526d334}">
-      <Declaration><![CDATA[METHOD bitmaskToString : STRING
+      <Declaration><![CDATA[
+METHOD bitmaskToString : STRING
 VAR_INPUT
     nBitmask: DWORD;
     nBits: UINT;
@@ -159,7 +161,8 @@ END_VAR
 bitmaskToString := '';
 FOR nIter := 1 TO nBits DO
     bitmaskToString := CONCAT(DWORD_TO_STRING(SHR(nBitmask, nIter - 1) AND 1), bitmaskToString);
-END_FOR]]></ST>
+END_FOR
+]]></ST>
       </Implementation>
     </Method>
   </POU>

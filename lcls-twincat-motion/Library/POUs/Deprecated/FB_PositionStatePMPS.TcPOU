@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStatePMPS" Id="{7e0e3094-8a3d-4636-a390-eb10e10412f0}" SpecialFunc="None">
-    <Declaration><![CDATA[{attribute 'obsolete' := 'Use FB_PositionStatePMPS1D instead'}
+    <Declaration><![CDATA[
+{attribute 'obsolete' := 'Use FB_PositionStatePMPS1D instead'}
 FUNCTION_BLOCK FB_PositionStatePMPS EXTENDS FB_PositionStatePMPS_Base
 (*
     Hooks up a position state to an arbiter and an FFO
@@ -43,27 +44,34 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[Exec();]]></ST>
+      <ST><![CDATA[
+Exec();
+]]></ST>
     </Implementation>
     <Action Name="AssertHere" Id="{7db9507d-999c-01b2-1227-c24720a7882a}">
       <Implementation>
-        <ST><![CDATA[fbArbiter.AddRequest(
+        <ST><![CDATA[
+fbArbiter.AddRequest(
     sDevName := stMotionStage.sName,
     nReqID := stStateReq.stPMPS.nRequestAssertionID,
-    stReqBP := stStateReq.stPMPS.stBeamParams);]]></ST>
+    stReqBP := stStateReq.stPMPS.stBeamParams);
+]]></ST>
       </Implementation>
     </Action>
     <Action Name="ClearAsserts" Id="{a5b537df-5b20-41f7-b1d6-59ce223e5b6e}">
       <Implementation>
-        <ST><![CDATA[fbArbiter.RemoveRequest(nTransitionAssertionID);
+        <ST><![CDATA[
+fbArbiter.RemoveRequest(nTransitionAssertionID);
 FOR nIter := 1 TO GeneralConstants.MAX_STATES DO
     fbArbiter.RemoveRequest(arrStates[nIter].stPMPS.nRequestAssertionID);
-END_FOR]]></ST>
+END_FOR
+]]></ST>
       </Implementation>
     </Action>
     <Action Name="HandleBPTM" Id="{15e95ede-ce74-498f-962a-8707e856078c}">
       <Implementation>
-        <ST><![CDATA[(*
+        <ST><![CDATA[
+(*
   Handle finishing the bptm late if timed out
   bptm needs a rising edge of bTransDone after authorizing transition
   If we fall into this block, bTransDone would otherwise be stuck at TRUE forever
@@ -95,12 +103,14 @@ IF stStateReq.stPMPS.nRequestAssertionID <> nTransitionAssertionID THEN
          q_xTransitionAuthorized=>bInternalAuth,
          bDone=>bBPTMDone);
     nLastReqAssertionID := stStateReq.stPMPS.nRequestAssertionID;
-END_IF]]></ST>
+END_IF
+]]></ST>
       </Implementation>
     </Action>
     <Action Name="HandleFFO" Id="{6b3afb71-b9c2-4718-aacf-85bf75e65e9c}">
       <Implementation>
-        <ST><![CDATA[// stBeamNeeded will point to Unknown/No beam if we are out of state bounds or in motion
+        <ST><![CDATA[
+// stBeamNeeded will point to Unknown/No beam if we are out of state bounds or in motion
 // Otherwise we'll have the current state's beam parameters
 
 // Check for bad conditions
@@ -170,7 +180,8 @@ ffUnknown(
     i_DevName := stMotionStage.sName,
     i_Desc := 'Unknown position between moves',
     i_TypeCode := 16#1005,
-    io_fbFFHWO := fbFFHWO);]]></ST>
+    io_fbFFHWO := fbFFHWO);
+]]></ST>
       </Implementation>
     </Action>
     <Action Name="HandlePmpsDb" Id="{12f558ca-eec1-4749-8d96-1f602a06515d}">
@@ -212,7 +223,8 @@ IF ftRead.Q AND NOT fbReadPmpsDb.bError THEN
     FOR nBPIndex := 1 TO GeneralConstants.MAX_STATES BY 1 DO
         arrStates[nBPIndex].stPMPS := arrPMPS[nBPIndex];
     END_FOR
-END_IF]]></ST>
+END_IF
+]]></ST>
       </Implementation>
     </Action>
   </POU>

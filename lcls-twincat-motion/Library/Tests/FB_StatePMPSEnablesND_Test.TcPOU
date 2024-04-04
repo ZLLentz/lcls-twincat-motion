@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_StatePMPSEnablesND_Test" Id="{ff910e0c-974f-4a98-85b1-04b7fad065f7}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_StatePMPSEnablesND_Test EXTENDS FB_MotorTestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_StatePMPSEnablesND_Test EXTENDS FB_MotorTestSuite
 (*
     Unit tests for FB_StatePMPSEnablesND
     I'm confident that FB_StatePMPSEnables was tested in FB_StatePMPSEnables_Test
@@ -47,10 +48,12 @@ SetGoodState(astPositionState[2][1]);
 
 TestUnderOverGoals();
 TestMaint();
-TestCount();]]></ST>
+TestCount();
+]]></ST>
     </Implementation>
     <Method Name="TestCount" Id="{d6400f38-11a7-4492-ab2a-c88608732da8}">
-      <Declaration><![CDATA[METHOD TestCount
+      <Declaration><![CDATA[
+METHOD TestCount
 VAR_INST
     fbEnables: FB_StatePMPSEnablesND;
     fbFFHWO: FB_HardwareFFOutput := (bAutoReset := TRUE);
@@ -86,7 +89,8 @@ TEST_FINISHED();
       </Implementation>
     </Method>
     <Method Name="TestMaint" Id="{d1343989-c22d-4197-9f79-b95d14375929}">
-      <Declaration><![CDATA[METHOD TestMaint
+      <Declaration><![CDATA[
+METHOD TestMaint
 VAR_INST
     fbEnables: FB_StatePMPSEnablesND;
     fbFFHWO: FB_HardwareFFOutput := (bAutoReset := TRUE);
@@ -135,11 +139,13 @@ AssertTrue(
     'In maintenance mode, we should be able to move anywhere',
 );
 
-TEST_FINISHED();]]></ST>
+TEST_FINISHED();
+]]></ST>
       </Implementation>
     </Method>
     <Method Name="TestUnderOverGoals" Id="{30ac6b2b-0053-4545-8595-c5bfc7395258}">
-      <Declaration><![CDATA[METHOD TestUnderOverGoals
+      <Declaration><![CDATA[
+METHOD TestUnderOverGoals
 VAR_INST
     fbEnables: FB_StatePMPSEnablesND;
     fbFFHWO: FB_HardwareFFOutput := (bAutoReset := TRUE);
@@ -206,7 +212,8 @@ AssertTrue(
     'Motor 2 should be able to move down to the goal',
 );
 
-TEST_FINISHED();]]></ST>
+TEST_FINISHED();
+]]></ST>
       </Implementation>
     </Method>
   </POU>

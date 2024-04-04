@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_StatesInputHandler" Id="{048f7518-d863-40bd-9997-a5f33bbe686c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_StatesInputHandler
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_StatesInputHandler
 (*
     Handle the state enum EPICS input for any of the ND state function blocks.
 

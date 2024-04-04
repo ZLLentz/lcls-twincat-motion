@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <DUT Name="ST_PositionState" Id="{85d45494-8a84-426c-8efe-9136ee5821c6}">
-    <Declaration><![CDATA[TYPE ST_PositionState :
+    <Declaration><![CDATA[
+TYPE ST_PositionState :
     // Defines settings and current safety status for moves to specific positions for an axis
 STRUCT
     // Name as queried via the NAME PV in EPICS
@@ -69,6 +70,7 @@ STRUCT
     // We give this a state name and it is used to load parameters from the pmps database.
     stPMPS: ST_DbStateParams;
 END_STRUCT
-END_TYPE]]></Declaration>
+END_TYPE
+]]></Declaration>
   </DUT>
 </TcPlcObject>

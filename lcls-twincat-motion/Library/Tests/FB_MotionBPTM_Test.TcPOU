@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_MotionBPTM_Test" Id="{74dc5407-5bbf-4092-b438-4ab304d6e18f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_MotionBPTM_Test EXTENDS TcUnit.FB_TestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_MotionBPTM_Test EXTENDS TcUnit.FB_TestSuite
 (*
     Test the functionality of the motion bptm,
     Which is just a bptm wrapped up with a set of n motors.
@@ -38,11 +39,11 @@ TestInit();
 Test3dMove();
 TestNoMove();
 TestCount();
-
 ]]></ST>
     </Implementation>
     <Method Name="AssertInPool" Id="{5d2e8161-724f-4980-ba8a-e3e41656d95f}">
-      <Declaration><![CDATA[METHOD AssertInPool
+      <Declaration><![CDATA[
+METHOD AssertInPool
 VAR_IN_OUT
     fbArbiter: FB_Arbiter;
     stDbStateParams: ST_DbStateParams;
@@ -69,7 +70,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="SetMotorDone" Id="{387bbfef-8396-472d-9e1b-a94d57b4b859}">
-      <Declaration><![CDATA[METHOD SetMotorDone
+      <Declaration><![CDATA[
+METHOD SetMotorDone
 VAR_INPUT
 END_VAR
 ]]></Declaration>
@@ -86,7 +88,8 @@ astMotionStage[3].bDone := TRUE;
       </Implementation>
     </Method>
     <Method Name="SetMotorMoving" Id="{9274df44-2fe4-4272-82fa-4af8d13cf00c}">
-      <Declaration><![CDATA[METHOD SetMotorMoving
+      <Declaration><![CDATA[
+METHOD SetMotorMoving
 VAR_INPUT
 END_VAR
 ]]></Declaration>
@@ -103,7 +106,8 @@ astMotionStage[3].bDone := FALSE;
       </Implementation>
     </Method>
     <Method Name="SetMotorStartup" Id="{23decd21-83c3-4f7e-bc90-32e7f7f554e3}">
-      <Declaration><![CDATA[METHOD SetMotorStartup
+      <Declaration><![CDATA[
+METHOD SetMotorStartup
 VAR_INPUT
 END_VAR
 ]]></Declaration>
@@ -120,7 +124,8 @@ astMotionStage[3].bDone := FALSE;
       </Implementation>
     </Method>
     <Method Name="Test3dMove" Id="{9921e26f-7be4-494e-96b8-8a52185f8503}">
-      <Declaration><![CDATA[METHOD Test3dMove : BOOL
+      <Declaration><![CDATA[
+METHOD Test3dMove : BOOL
 (*
     Can we safely do a 3d move?
 *)
@@ -233,18 +238,12 @@ fbSubSysIO(
     LA:=fbArbiter,
     FFO:=fbFFHWO,
 );
-
-
-
-
-
-
-
 ]]></ST>
       </Implementation>
     </Method>
     <Method Name="TestCount" Id="{210e6655-146a-47df-9045-4ed85f85c10f}">
-      <Declaration><![CDATA[METHOD TestCount
+      <Declaration><![CDATA[
+METHOD TestCount
 (*
     FB Should just error out if we forgot to give a count
 *)
@@ -257,7 +256,8 @@ VAR_INST
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[TEST('TestCount');
+        <ST><![CDATA[
+TEST('TestCount');
 
 SetMotorStartup();
 fbBptm(
@@ -290,7 +290,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestInit" Id="{aa2dec78-fff0-42b9-a0fa-1c26187b6d46}">
-      <Declaration><![CDATA[METHOD TestInit : BOOL
+      <Declaration><![CDATA[
+METHOD TestInit : BOOL
 (*
     If we initialize with still motors, do we get an arbiter request at the current goal? Hopefully we do.
 *)
@@ -344,7 +345,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestNoMove" Id="{fb9625b7-e60b-4c6d-b5c7-290ec4718085}">
-      <Declaration><![CDATA[METHOD TestNoMove
+      <Declaration><![CDATA[
+METHOD TestNoMove
 (*
     In place transitions should work at startup and also at done positions.
 *)
@@ -357,7 +359,6 @@ VAR_INST
     nState: UINT;
     tonTimer: TON;
 END_VAR
-
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[
@@ -438,7 +439,8 @@ END_CASE
 fbSubSysIO(
     LA:=fbArbiter,
     FFO:=fbFFHWO,
-);]]></ST>
+);
+]]></ST>
       </Implementation>
     </Method>
   </POU>

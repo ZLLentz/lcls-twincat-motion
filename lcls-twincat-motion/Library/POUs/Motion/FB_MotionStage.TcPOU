@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_MotionStage" Id="{137c52b5-8983-4728-b719-31601503f20a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_MotionStage
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_MotionStage
 (*
     Default implementation for PLC behavior when motor IOC asks for a move
     This can be extended or replaced in your PLC project if you want
@@ -38,7 +39,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Start with an accurate status
+      <ST><![CDATA[
+// Start with an accurate status
 stMotionStage.Axis.ReadStatus();
 
 // Check for the plc shortcut commands
@@ -303,7 +305,8 @@ fbNCParams(
 // Save and restore as long as not an absolute encoder
 fbSaveRestore(
     stMotionStage:=stMotionStage,
-    bEnable:=stMotionStage.nHomingMode <> E_EpicsHomeCmd.NONE);]]></ST>
+    bEnable:=stMotionStage.nHomingMode <> E_EpicsHomeCmd.NONE);
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_Standard_PMPSDB" Id="{52f7b5a3-5818-4b33-bcd8-067d0c9d8102}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_Standard_PMPSDB
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_Standard_PMPSDB
 (*
     This FB should be run on every motion PLC to encapsulate the pmps file reader.
     It is pre-instantiated at MOTION_GVL.fbStandardPMPSDB
@@ -45,7 +46,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF NOT bEnable THEN
+      <ST><![CDATA[
+IF NOT bEnable THEN
     RETURN;
 END_IF
 
@@ -88,7 +90,8 @@ IF ftBusy.Q AND NOT MOTION_GVL.fbPmpsFileReader.bError THEN
    nLastRefreshTime := TO_DINT(TO_DT(SystemTime_TO_DT(fbTime_to_UTC.out)));
 END_IF
 
-bExecute R= ftBusy.Q;]]></ST>
+bExecute R= ftBusy.Q;
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

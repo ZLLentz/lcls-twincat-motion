@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_MotionBPTM" Id="{f471bde6-e465-403f-9379-def7c3329cbf}" SpecialFunc="None">
     <Declaration><![CDATA[

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_StatePMPSEnables_Test" Id="{5c47f34f-d68e-4ecd-b2fb-e45bba741378}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_StatePMPSEnables_Test EXTENDS FB_MotorTestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_StatePMPSEnables_Test EXTENDS FB_MotorTestSuite
 (*
     Tests for FB_StatePMPSEnables
 
@@ -75,10 +76,12 @@ END_IF
 tonTimer(
     IN:=bStatesReady,
     PT:=T#5s,
-);]]></ST>
+);
+]]></ST>
     </Implementation>
     <Method Name="TestAbove" Id="{bc286948-b217-49e2-8136-d78acdf6793d}">
-      <Declaration><![CDATA[METHOD TestAbove
+      <Declaration><![CDATA[
+METHOD TestAbove
 VAR_INPUT
     nTestID: UINT;
 END_VAR
@@ -149,7 +152,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestAt" Id="{eeabf203-9322-4bdb-a96d-693569eb0c9f}">
-      <Declaration><![CDATA[METHOD TestAt
+      <Declaration><![CDATA[
+METHOD TestAt
 VAR_INPUT
     nTestID: UINT;
 END_VAR
@@ -220,7 +224,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestBelow" Id="{28005b43-1e5b-4c6e-8bd7-a817cc2c0eb4}">
-      <Declaration><![CDATA[METHOD TestBelow
+      <Declaration><![CDATA[
+METHOD TestBelow
 VAR_INPUT
     nTestID: UINT;
 END_VAR
@@ -292,7 +297,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestDisabled" Id="{c7db8114-667b-44b5-9eaa-1b1048940e05}">
-      <Declaration><![CDATA[METHOD TestDisabled
+      <Declaration><![CDATA[
+METHOD TestDisabled
 VAR_INPUT
     nTestID: UINT;
 END_VAR
@@ -303,7 +309,6 @@ VAR_INST
 
     bInit: BOOL;
 END_VAR
-
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[
@@ -365,7 +370,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestInvalid" Id="{af1a625f-1614-486f-ac30-8390914f582a}">
-      <Declaration><![CDATA[METHOD TestInvalid
+      <Declaration><![CDATA[
+METHOD TestInvalid
 VAR_INPUT
     nTestID: UINT;
 END_VAR
@@ -408,7 +414,8 @@ TEST_FINISHED();
       </Implementation>
     </Method>
     <Method Name="TestLimits" Id="{6546d47a-b549-4011-b1e7-32f110cda4b9}">
-      <Declaration><![CDATA[METHOD TestLimits
+      <Declaration><![CDATA[
+METHOD TestLimits
 VAR_INPUT
     nTestID: UINT;
 END_VAR
@@ -418,7 +425,8 @@ VAR_INST
     fbMove: FB_TestHelperSetAndMove;
 
     bInit: BOOL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestLimits');
@@ -477,11 +485,13 @@ IF tonTimer.Q OR fbMove.bSetDone THEN
     );
     bOneTestDone := TRUE;
     TEST_FINISHED();
-END_IF]]></ST>
+END_IF
+]]></ST>
       </Implementation>
     </Method>
     <Method Name="TestMoveAt" Id="{4acc0b73-dcdb-41dd-bf32-ed9903ec0f24}">
-      <Declaration><![CDATA[METHOD TestMoveAt
+      <Declaration><![CDATA[
+METHOD TestMoveAt
 VAR_INPUT
     nTestID: UINT;
 END_VAR
@@ -557,7 +567,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestMoveTo" Id="{98c46d12-8b7c-43dd-b3b3-9f3e17c240da}">
-      <Declaration><![CDATA[METHOD TestMoveTo
+      <Declaration><![CDATA[
+METHOD TestMoveTo
 VAR_INPUT
     nTestID: UINT;
 END_VAR
@@ -633,7 +644,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestNotUpdated" Id="{e3e62099-da37-4d9e-b58b-650fd1e6c70e}">
-      <Declaration><![CDATA[METHOD TestNotUpdated
+      <Declaration><![CDATA[
+METHOD TestNotUpdated
 VAR_INPUT
     nTestID: UINT;
 END_VAR

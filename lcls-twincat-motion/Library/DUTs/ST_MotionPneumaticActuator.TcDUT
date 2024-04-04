@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <DUT Name="ST_MotionPneumaticActuator" Id="{ee78164b-027c-4a52-afc0-269c58a42ceb}">
-    <Declaration><![CDATA[{attribute 'qualified_only'}
+    <Declaration><![CDATA[
+{attribute 'qualified_only'}
 {attribute 'strict'}
 TYPE ST_MotionPneumaticActuator :
     // Defines the EPICS interface to actuating a pneumatic stage

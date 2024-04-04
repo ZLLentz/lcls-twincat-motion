@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_StateSetupHelper" Id="{802f49f0-571f-413b-bf0f-1cf473b320d9}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_StateSetupHelper
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_StateSetupHelper
 (*
     This is a helper for setting up large numbers of ST_PositionState instances.
 

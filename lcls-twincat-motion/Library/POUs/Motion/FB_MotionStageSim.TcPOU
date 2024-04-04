@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_MotionStageSim" Id="{d9a67e97-6cca-43d0-9ed9-24a1d18bbca1}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_MotionStageSim
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_MotionStageSim
 (*
     Set all the values needed for a fake motor to be movable
     via the IOC, then call FB_MotionStage
@@ -18,7 +19,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF NOT bInit THEN
+      <ST><![CDATA[
+IF NOT bInit THEN
     bInit := TRUE;
     // Stand-in for no forward limit
     stMotionStage.bLimitForwardEnable := TRUE;
@@ -32,7 +34,8 @@ END_VAR
     stMotionStage.nEnableMode := nEnableMode;
 END_IF
 // Call FB_MotionStage to do the thing
-fbMotionStage(stMotionStage := stMotionStage);]]></ST>
+fbMotionStage(stMotionStage := stMotionStage);
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

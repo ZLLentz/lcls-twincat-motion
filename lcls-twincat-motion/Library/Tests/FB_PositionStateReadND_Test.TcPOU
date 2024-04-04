@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStateReadND_Test" Id="{4b592fad-9c2c-4bce-a31b-7960aad2ca81}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionStateReadND_Test EXTENDS FB_MotorTestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionStateReadND_Test EXTENDS FB_MotorTestSuite
 (*
     Test that FB_PositionStateReadND can be used to read and summarize
     N-dimensional state positions where multiple motors must move in
@@ -43,7 +44,8 @@ VAR CONSTANT
     AWAY: UINT := 4;
     LAST_TEST: UINT := AWAY;
     TEST_COUNT: UINT := 5;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[
 PerMotor(1);
@@ -88,10 +90,12 @@ IF bSqAssertDone THEN
         bSqAssertDone := FALSE;
         nSqAssertCounter := nSqAssertCounter + 1;
     END_IF
-END_IF]]></ST>
+END_IF
+]]></ST>
     </Implementation>
     <Method Name="DoAssert" Id="{80756ff2-0af2-4418-83af-c425e1ba5c62}">
-      <Declaration><![CDATA[METHOD PRIVATE DoAssert
+      <Declaration><![CDATA[
+METHOD PRIVATE DoAssert
 VAR_INPUT
     nMotorCase1: UINT;
     nMotorCase2: UINT;
@@ -159,7 +163,8 @@ AssertEquals_DINT(
       </Implementation>
     </Method>
     <Method Name="DoMove" Id="{b2902d75-90e1-4000-aeee-9bd6641cfb93}">
-      <Declaration><![CDATA[METHOD PRIVATE DoMove: BOOL
+      <Declaration><![CDATA[
+METHOD PRIVATE DoMove: BOOL
 VAR_INPUT
     nMotorIndex: UINT;
     nMotorCase: UINT;
@@ -223,7 +228,8 @@ DoMove S= afbTestMove[nMotorIndex].tElapsed > T#5s;
       </Implementation>
     </Method>
     <Method Name="DoRead" Id="{6f669269-657a-4dd2-a5a9-367d17113825}">
-      <Declaration><![CDATA[METHOD PRIVATE DoRead
+      <Declaration><![CDATA[
+METHOD PRIVATE DoRead
 VAR_INPUT
 END_VAR
 ]]></Declaration>
@@ -234,11 +240,13 @@ fbRead(
     astPositionState:=astPositionState,
     nActiveMotorCount:=3,
 );
-    ]]></ST>
+
+]]></ST>
       </Implementation>
     </Method>
     <Method Name="PerMotor" Id="{f47ebc9f-5057-42b7-ab63-07c822af4c4b}">
-      <Declaration><![CDATA[METHOD PRIVATE PerMotor : BOOL
+      <Declaration><![CDATA[
+METHOD PRIVATE PerMotor : BOOL
 VAR_INPUT
     nIndex: DINT;
 END_VAR
@@ -270,12 +278,14 @@ afbInternal[nIndex][2](
       </Implementation>
     </Method>
     <Method Name="SquareSetup" Id="{84af8424-a19e-4a17-9b41-0e799f55aee2}">
-      <Declaration><![CDATA[METHOD SquareSetup
+      <Declaration><![CDATA[
+METHOD SquareSetup
 VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[// 2 motors, 4 positions per motor, square geometry
+        <ST><![CDATA[
+// 2 motors, 4 positions per motor, square geometry
 // Motor 1 is X, motor 2 is Y
 // Corners at (10,10), (10, 20), (20, 10), (20, 20)
 // So motor 1 is either LEFT=10 or RIGHT=20
@@ -354,11 +364,13 @@ SetGoodState(astSquareStates[2][4]);
 afbSqInternal[2][4](
     stMotionStage:=astMotionStage[1],
     stPositionState:=astSquareStates[2][4],
-);]]></ST>
+);
+]]></ST>
       </Implementation>
     </Method>
     <Method Name="TestCombos" Id="{481100c9-0915-4b4e-b684-ec082ca225fc}">
-      <Declaration><![CDATA[METHOD PRIVATE TestCombos
+      <Declaration><![CDATA[
+METHOD PRIVATE TestCombos
 VAR_INPUT
     nAssertID: UINT;
 END_VAR
@@ -419,7 +431,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestForgot" Id="{8ee66784-0269-4074-a44f-3e9eda7e6735}">
-      <Declaration><![CDATA[METHOD PRIVATE TestForgot
+      <Declaration><![CDATA[
+METHOD PRIVATE TestForgot
 VAR
 END_VAR
 ]]></Declaration>
@@ -442,7 +455,8 @@ TEST_FINISHED();
       </Implementation>
     </Method>
     <Method Name="TestSquare" Id="{30e0cb06-d0bf-47b9-9fd8-b45748a4c3db}">
-      <Declaration><![CDATA[METHOD TestSquare
+      <Declaration><![CDATA[
+METHOD TestSquare
 VAR_INPUT
     nAssertID: UINT;
 END_VAR
@@ -453,7 +467,8 @@ VAR
 END_VAR
 VAR_INST
     tonTimeout: TON;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 // We'll do 5 tests, one at each square point and one more in the middle
@@ -523,7 +538,8 @@ IF tonTimeout.Q OR afbSqTestMove[1].bSetDone AND afbSqTestMove[1].bSetDone THEN
         TEST_FINISHED();
     END_IF
     tonTimeout(IN:=FALSE);
-END_IF]]></ST>
+END_IF
+]]></ST>
       </Implementation>
     </Method>
   </POU>

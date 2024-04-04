@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_EncSaveRestore" Id="{7f38772f-c9da-4f49-aee1-95cd4af3fbdf}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_EncSaveRestore
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_EncSaveRestore
 VAR_IN_OUT
     stMotionStage: ST_MotionStage;
 END_VAR
@@ -29,7 +30,8 @@ VAR PERSISTENT
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF bEnable THEN
+      <ST><![CDATA[
+IF bEnable THEN
     // Trigger a load if anything was saved at all
     IF NOT bInit THEN
         bInit := TRUE;
@@ -83,7 +85,8 @@ END_VAR
         // It will be TRUE at startup if we have saved values
         bSaved := TRUE;
     END_IF
-END_IF]]></ST>
+END_IF
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

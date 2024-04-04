@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_TestHelperSetAndMove_Test" Id="{fabeb413-c671-4e17-8ed8-2cdfd13d09b0}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_TestHelperSetAndMove_Test EXTENDS TcUnit.FB_TestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_TestHelperSetAndMove_Test EXTENDS TcUnit.FB_TestSuite
 (*
     Ensure that the test helper function block works as needed.
     Without this, all tests that need motion cannot pass.
@@ -23,7 +24,8 @@ BasicMotion();
 ]]></ST>
     </Implementation>
     <Method Name="BasicMotion" Id="{18b58f91-fb57-42d9-8ad5-49bcaf7c02ef}">
-      <Declaration><![CDATA[METHOD PRIVATE BasicMotion
+      <Declaration><![CDATA[
+METHOD PRIVATE BasicMotion
 VAR_INPUT
 END_VAR
 ]]></Declaration>

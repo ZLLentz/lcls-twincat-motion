@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionState2D_InOut" Id="{e1a37f1f-41f0-4e01-91d0-1b5090db86f1}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionState2D_InOut
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionState2D_InOut
 (*
     An example and usable drop-in instance for a 2D state device with just an IN and an OUT state.
 *)
@@ -78,7 +79,8 @@ fbPositionState2D(
 stOut1 := astPositionState1[E_EpicsInOut.OUT];
 stIn1 := astPositionState1[E_EpicsInOut.IN];
 stOut2 := astPositionState2[E_EpicsInOut.OUT];
-stIn2 := astPositionState2[E_EpicsInOut.IN];]]></ST>
+stIn2 := astPositionState2[E_EpicsInOut.IN];
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

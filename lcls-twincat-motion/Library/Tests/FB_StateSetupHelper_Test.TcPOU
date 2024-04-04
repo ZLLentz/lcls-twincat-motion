@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_StateSetupHelper_Test" Id="{eec1b428-2489-44ca-a8ea-53e83a82b6b9}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_StateSetupHelper_Test EXTENDS FB_TestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_StateSetupHelper_Test EXTENDS FB_TestSuite
 VAR
     astStates: ARRAY[1..10] OF ST_PositionState;
     stDefaultDefault: ST_PositionState;
@@ -17,7 +18,8 @@ TestOnlyOnce();
 ]]></ST>
     </Implementation>
     <Method Name="TestDefaultOnly" Id="{fa5e35af-a5df-4ee3-a779-8e79f01348ac}">
-      <Declaration><![CDATA[METHOD TestDefaultOnly
+      <Declaration><![CDATA[
+METHOD TestDefaultOnly
 VAR
     fbStateSetup: FB_StateSetupHelper;
     stDefault: ST_PositionState := (
@@ -67,7 +69,8 @@ TEST_FINISHED();
       </Implementation>
     </Method>
     <Method Name="TestManyOverrides" Id="{a0d9370e-aeec-4fba-9010-fb66e02a6c9c}">
-      <Declaration><![CDATA[METHOD TestManyOverrides
+      <Declaration><![CDATA[
+METHOD TestManyOverrides
 VAR
     fbStateSetup: FB_StateSetupHelper;
     stDefault: ST_PositionState := (
@@ -117,12 +120,12 @@ AssertEquals_BOOL(stDefaultDefault.bUseRawCounts, stTwo.bUseRawCounts, 'Wrong bU
 AssertEquals_STRING(stDefaultDefault.stPMPS.sPmpsState, stTwo.stPMPS.sPmpsState, 'Wrong sPmpsState in state 2');
 
 TEST_FINISHED();
-
 ]]></ST>
       </Implementation>
     </Method>
     <Method Name="TestNoDefault" Id="{8b0f8cbe-c302-43d7-8865-0bd56710a180}">
-      <Declaration><![CDATA[METHOD TestNoDefault
+      <Declaration><![CDATA[
+METHOD TestNoDefault
 VAR
     fbStateSetup: FB_StateSetupHelper;
     stTarget: ST_PositionState;
@@ -142,7 +145,8 @@ TEST_FINISHED();
       </Implementation>
     </Method>
     <Method Name="TestNormalCase" Id="{6b63706c-018d-4836-a8e2-365a463ab059}">
-      <Declaration><![CDATA[METHOD TestNormalCase
+      <Declaration><![CDATA[
+METHOD TestNormalCase
 VAR
     fbStateSetup: FB_StateSetupHelper;
     stDefault: ST_PositionState;
@@ -152,7 +156,8 @@ VAR CONSTANT
     cVelocity: LREAL := 10;
     cMoveOk: BOOL := TRUE;
     cValid: BOOL := TRUE;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestNormalCase');
@@ -209,12 +214,12 @@ AssertEquals_BOOL(stDefaultDefault.bUseRawCounts, astStates[3].bUseRawCounts, 'W
 AssertEquals_STRING('FAKE_TT', astStates[3].stPMPS.sPmpsState, 'Wrong sPmpsState in state 3');
 
 TEST_FINISHED();
-
 ]]></ST>
       </Implementation>
     </Method>
     <Method Name="TestOnlyOnce" Id="{9a81d898-6374-4f9b-9d5f-d80e1591e51c}">
-      <Declaration><![CDATA[METHOD TestOnlyOnce
+      <Declaration><![CDATA[
+METHOD TestOnlyOnce
 VAR
     fbStateSetup: FB_StateSetupHelper;
     stDefault: ST_PositionState;
@@ -243,7 +248,8 @@ AssertEquals_LREAL(stTarget.fPosition, 12, 0, 'FB_StateSetupHelper ran twice!');
 fbStateSetup(stPositionState:=stTarget, bForceUpdate:=TRUE, fPosition:=10);
 AssertEquals_LREAL(stTarget.fPosition, 10, 0, 'bForceUpdate failed');
 
-TEST_FINISHED();]]></ST>
+TEST_FINISHED();
+]]></ST>
       </Implementation>
     </Method>
   </POU>

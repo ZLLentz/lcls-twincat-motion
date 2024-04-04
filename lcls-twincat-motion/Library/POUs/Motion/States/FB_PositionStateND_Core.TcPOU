@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStateND_Core" Id="{be627b84-a239-4e6f-8f4f-59498d92de82}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionStateND_Core
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionStateND_Core
 (*
     Collection of all the actions shared between all states FBs
     This is used in e.g.
@@ -46,7 +47,8 @@ VAR
     astMoveGoals: ARRAY[1..MotionConstants.MAX_STATE_MOTORS] OF ST_PositionState;
     stInvalidPos: ST_PositionState;
     nIterMotor: DINT;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[
 stEpicsToPlc.nSetValue := eEnumSet;

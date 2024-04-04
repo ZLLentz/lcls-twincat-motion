@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_MotionStageNCParams" Id="{ffafdde1-c9c9-04ad-2047-9434c7439ed8}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_MotionStageNCParams
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_MotionStageNCParams
 (*
     Read and refresh axis parameters struct on ST_MotionStage
 *)
@@ -23,7 +24,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[timer(
+      <ST><![CDATA[
+timer(
     IN:=bEnable AND NOT bExecute,
     PT:=tRefreshDelay);
 bExecute S= timer.Q;
@@ -36,7 +38,8 @@ IF mcReadParams.ErrorID <> 0 THEN
     nLatchErrId := 0;
 END_IF
 bExecute R= mcReadParams.Done OR mcReadParams.Error;
-stMotionStage.bAxisParamsInit S= mcReadParams.Done;]]></ST>
+stMotionStage.bAxisParamsInit S= mcReadParams.Done;
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

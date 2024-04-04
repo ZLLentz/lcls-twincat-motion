@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStatePMPSND_Core" Id="{9cc56e31-20ab-431f-af71-fce298d8fa94}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionStatePMPSND_Core
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionStatePMPSND_Core
 (*
     Collection of all core actions shared between all PMPS states FBs
     This is used in e.g.
@@ -143,7 +144,8 @@ fbPerMotorFFO(
 );
 
 stPMPSPlcToEpics.stTransitionDb := fbMotionReadPMPSDB.astDbStateParams[0];
-stDbStateParams := fbMotionReadPMPSDB.astDbStateParams[stPlcToEpics.nGetValue];]]></ST>
+stDbStateParams := fbMotionReadPMPSDB.astDbStateParams[stPlcToEpics.nGetValue];
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStateBase_WithPMPS_Test" Id="{e8770d3e-d120-4022-9494-184782095d7b}" SpecialFunc="None">
-    <Declaration><![CDATA[{attribute 'obsolete' := 'No longer any reason to use this, all state classes can have unit tests.'}
+    <Declaration><![CDATA[
+{attribute 'obsolete' := 'No longer any reason to use this, all state classes can have unit tests.'}
 FUNCTION_BLOCK FB_PositionStateBase_WithPMPS_Test EXTENDS FB_PositionStateBase
 (*
     Handles EPICS moves between multiple states for a single axis with fake PMPS.
@@ -14,9 +15,11 @@ VAR_INPUT
 END_VAR
 VAR
     fbStatePMPS: FB_PositionStatePMPS_Test;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(*
+      <ST><![CDATA[
+(*
     Subclass me, define enums to translate setState and getState, call Exec
 
     Example:
@@ -26,22 +29,27 @@ END_VAR]]></Declaration>
     Exec();
     enumGet := getState;
     enumSet := setState;
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
     <Action Name="Exec" Id="{728eaac9-6061-4f76-bbe0-688e7ec11078}">
       <Implementation>
-        <ST><![CDATA[StateHandler();
-PMPSHandler();]]></ST>
+        <ST><![CDATA[
+StateHandler();
+PMPSHandler();
+]]></ST>
       </Implementation>
     </Action>
     <Action Name="PMPSHandler" Id="{0fb241e5-91dc-4ff0-8a2d-329b6cc9a0ad}">
       <Implementation>
-        <ST><![CDATA[fbStatePMPS(
+        <ST><![CDATA[
+fbStatePMPS(
     stMotionStage:=stMotionStage,
     arrStates:=arrStates,
     bRequestTransition:=setState <> 0,
     setState:=setState,
-    getState:=getState);]]></ST>
+    getState:=getState);
+]]></ST>
       </Implementation>
     </Action>
   </POU>

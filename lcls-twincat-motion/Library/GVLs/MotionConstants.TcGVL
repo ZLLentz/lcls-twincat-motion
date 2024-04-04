@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <GVL Name="MotionConstants" Id="{82935be4-17a5-42af-bb80-6817aae62409}" ParameterList="True">
-    <Declaration><![CDATA[{attribute 'qualified_only'}
+    <Declaration><![CDATA[
+{attribute 'qualified_only'}
 (*
     Global Configurable Motion Constants
 
@@ -15,6 +16,7 @@ VAR_GLOBAL CONSTANT
     If you are not sure how many motors are used per state block, check MOTION_GVL.nMaxStateMotorCount
     *)
     MAX_STATE_MOTORS: UINT := 3;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
   </GVL>
 </TcPlcObject>

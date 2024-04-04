@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_MicroStepCountTest" Id="{b953130d-6adb-468e-991b-b389a0e4364b}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_MicroStepCountTest
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_MicroStepCountTest
 VAR_INPUT
     bExecute: BOOL;
     fStepSize: LREAL;
@@ -35,9 +36,11 @@ VAR
     fStepChange: LREAL;
 
     fStepSum: LREAL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Motion FB
+      <ST><![CDATA[
+// Motion FB
 fbMoveRel(Axis:=Axis,
     Execute:=bDoMove,
     Distance:=fStepSize,
@@ -85,7 +88,8 @@ IF fbSettleTimer.Q THEN
     nStepCounter := nStepCounter + 1;
     // Reset the move block
     bDoMove := FALSE;
-END_IF]]></ST>
+END_IF
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

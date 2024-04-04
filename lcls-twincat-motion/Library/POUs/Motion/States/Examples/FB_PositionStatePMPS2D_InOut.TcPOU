@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStatePMPS2D_InOut" Id="{562c1dac-2687-4ac2-8786-c287d47af06e}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionStatePMPS2D_InOut
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionStatePMPS2D_InOut
 (*
     An example and usable drop-in instance for a 2D state device with just an IN and an OUT state.
     Note that the outward-facing API is nearly identical to the non-PMPS version
@@ -86,7 +87,8 @@ fbPositionStatePMPS2D(
 stOut1 := astPositionState1[E_EpicsInOut.OUT];
 stIn1 := astPositionState1[E_EpicsInOut.IN];
 stOut2 := astPositionState2[E_EpicsInOut.OUT];
-stIn2 := astPositionState2[E_EpicsInOut.IN];]]></ST>
+stIn2 := astPositionState2[E_EpicsInOut.IN];
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_AtPositionState_Test" Id="{cc4d1353-89e8-4ab0-b592-6491b8e8bd3e}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_AtPositionState_Test EXTENDS TcUnit.FB_TestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_AtPositionState_Test EXTENDS TcUnit.FB_TestSuite
 (*
     Test the following related helper functions:
     - F_PosOverLowerBound
@@ -79,11 +80,11 @@ IF bOneTestDone THEN
         bExecute:=FALSE,
     );
 END_IF
-
 ]]></ST>
     </Implementation>
     <Method Name="TestAtPositionStateInvalid" Id="{cd076af2-9cac-4a9c-b69d-20d2d211c94e}">
-      <Declaration><![CDATA[METHOD PRIVATE TestAtPositionStateInvalid
+      <Declaration><![CDATA[
+METHOD PRIVATE TestAtPositionStateInvalid
 (*
     If a position state is invalid, it is never the right state.
 *)
@@ -123,10 +124,12 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestAtPositionStateJustRight" Id="{39ff2cac-d40d-4406-a14e-6c167c76a2b9}">
-      <Declaration><![CDATA[METHOD PRIVATE TestAtPositionStateJustRight
+      <Declaration><![CDATA[
+METHOD PRIVATE TestAtPositionStateJustRight
 VAR
     fLocalGoal: LREAL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestAtPositionStateJustRight');
@@ -160,7 +163,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestAtPositionStateLeave" Id="{72bf20af-3ef6-49e3-8f7b-9ccf7642a01b}">
-      <Declaration><![CDATA[METHOD PRIVATE TestAtPositionStateLeave
+      <Declaration><![CDATA[
+METHOD PRIVATE TestAtPositionStateLeave
 (*
     A move away from a state should be not at the state, even before we've left
 *)
@@ -206,10 +210,12 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestAtPositionStateTooHigh" Id="{fffcbd9f-b84e-4e73-869e-5d30112d5f41}">
-      <Declaration><![CDATA[METHOD PRIVATE TestAtPositionStateTooHigh
+      <Declaration><![CDATA[
+METHOD PRIVATE TestAtPositionStateTooHigh
 VAR
     fLocalGoal: LREAL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestAtPositionStateTooHigh');
@@ -243,10 +249,12 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestAtPositionStateTooLow" Id="{1e4e3123-a9ec-43be-b844-164b02fc21fb}">
-      <Declaration><![CDATA[METHOD PRIVATE TestAtPositionStateTooLow
+      <Declaration><![CDATA[
+METHOD PRIVATE TestAtPositionStateTooLow
 VAR
     fLocalGoal: LREAL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestAtPositionStateTooLow');
@@ -280,7 +288,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestAtPositionStateTweak" Id="{a5723450-03c2-48d9-81a3-66f14077db94}">
-      <Declaration><![CDATA[METHOD PRIVATE TestAtPositionStateTweak
+      <Declaration><![CDATA[
+METHOD PRIVATE TestAtPositionStateTweak
 (*
     A small tweak move within the delta of a position state should be OK
 *)
@@ -323,13 +332,15 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestAtPositionStateWithoutInternal" Id="{ebef7a20-0da3-478a-8be6-cb376035d974}">
-      <Declaration><![CDATA[METHOD PRIVATE TestAtPositionStateWithoutInternal
+      <Declaration><![CDATA[
+METHOD PRIVATE TestAtPositionStateWithoutInternal
 (*
     If a position state is never updated by the internal FB, it is never the right state.
 *)
 VAR
 
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestAtPositionStateWithoutInternal');
@@ -363,10 +374,12 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestPosOverLowerBoundNo" Id="{c7b3c6d5-cfde-4efa-b380-ef718a268150}">
-      <Declaration><![CDATA[METHOD PRIVATE TestPosOverLowerBoundNo
+      <Declaration><![CDATA[
+METHOD PRIVATE TestPosOverLowerBoundNo
 VAR
     stPositionState: ST_PositionState;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestPosOverLowerBoundNo');
@@ -385,7 +398,8 @@ TEST_FINISHED();
       </Implementation>
     </Method>
     <Method Name="TestPosOverLowerBoundYes" Id="{7ad2987d-8fe3-4ede-a43d-522c670c925b}">
-      <Declaration><![CDATA[METHOD PRIVATE TestPosOverLowerBoundYes
+      <Declaration><![CDATA[
+METHOD PRIVATE TestPosOverLowerBoundYes
 VAR
     stPositionState: ST_PositionState;
 END_VAR
@@ -408,10 +422,12 @@ TEST_FINISHED();
       </Implementation>
     </Method>
     <Method Name="TestPosUnderUpperBoundNo" Id="{720399c3-37fb-45f8-a28e-4bbad2cc7738}">
-      <Declaration><![CDATA[METHOD PRIVATE TestPosUnderUpperBoundNo
+      <Declaration><![CDATA[
+METHOD PRIVATE TestPosUnderUpperBoundNo
 VAR
     stPositionState: ST_PositionState;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestPosUnderUpperBoundNo');
@@ -430,10 +446,12 @@ TEST_FINISHED();
       </Implementation>
     </Method>
     <Method Name="TestPosUnderUpperBoundYes" Id="{48bb5b7e-8ffc-4686-b2a9-ab5fec8c7ed8}">
-      <Declaration><![CDATA[METHOD PRIVATE TestPosUnderUpperBoundYes
+      <Declaration><![CDATA[
+METHOD PRIVATE TestPosUnderUpperBoundYes
 VAR
     stPositionState: ST_PositionState;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestPosUnderUpperBoundYes');
@@ -452,10 +470,12 @@ TEST_FINISHED();
       </Implementation>
     </Method>
     <Method Name="TestPosWithinDeltaJustRight" Id="{c0819698-ac76-412a-b318-85ac31c07ff9}">
-      <Declaration><![CDATA[METHOD PRIVATE TestPosWithinDeltaJustRight
+      <Declaration><![CDATA[
+METHOD PRIVATE TestPosWithinDeltaJustRight
 VAR
     stPositionState: ST_PositionState;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestPosWithinDeltaJustRight');
@@ -474,10 +494,12 @@ TEST_FINISHED();
       </Implementation>
     </Method>
     <Method Name="TestPosWithinDeltaTooHigh" Id="{9819f8f5-cffd-409d-9f2d-4c2b085e21e1}">
-      <Declaration><![CDATA[METHOD PRIVATE TestPosWithinDeltaTooHigh
+      <Declaration><![CDATA[
+METHOD PRIVATE TestPosWithinDeltaTooHigh
 VAR
     stPositionState: ST_PositionState;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestPosWithinDeltaTooHigh');
@@ -496,10 +518,12 @@ TEST_FINISHED();
       </Implementation>
     </Method>
     <Method Name="TestPosWithinDeltaTooLow" Id="{32360390-5818-4444-9536-05d1806527b3}">
-      <Declaration><![CDATA[METHOD PRIVATE TestPosWithinDeltaTooLow
+      <Declaration><![CDATA[
+METHOD PRIVATE TestPosWithinDeltaTooLow
 VAR
     stPositionState: ST_PositionState;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestPosWithinDeltaTooLow');

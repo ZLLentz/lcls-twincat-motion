@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStateMove_Test" Id="{790463b9-e234-4505-8844-0fd9623da364}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionStateMove_Test EXTENDS FB_MotorTestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionStateMove_Test EXTENDS FB_MotorTestSuite
 (*
     Test that FB_PositionStateMove can be used to move motors to named state positions
     And that the API behaves exactly as described.
@@ -132,13 +133,15 @@ tonTimer(
 ]]></ST>
     </Implementation>
     <Method Name="TestBadStates" Id="{879d6a71-af35-4146-a1a6-b64142eb1f2f}">
-      <Declaration><![CDATA[METHOD TestBadStates
+      <Declaration><![CDATA[
+METHOD TestBadStates
 VAR_INPUT
     nTestIndex: UINT;
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[TEST(CONCAT('TestInvalid', UINT_TO_STRING(nTestIndex)));
+        <ST><![CDATA[
+TEST(CONCAT('TestInvalid', UINT_TO_STRING(nTestIndex)));
 IF nTestCounter <> nTestIndex OR bOneTestDone THEN
     RETURN;
 END_IF
@@ -213,7 +216,8 @@ TEST_FINISHED();
       </Implementation>
     </Method>
     <Method Name="TestMove" Id="{e32e39d1-d908-4e1d-a77e-6982c23e392d}">
-      <Declaration><![CDATA[METHOD TestMove
+      <Declaration><![CDATA[
+METHOD TestMove
 VAR_INPUT
     nTestIndex: UINT;
     nStateIndex: UINT;
@@ -226,7 +230,8 @@ VAR_INST
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[TEST(CONCAT('TestMove', UINT_TO_STRING(nTestIndex)));
+        <ST><![CDATA[
+TEST(CONCAT('TestMove', UINT_TO_STRING(nTestIndex)));
 IF nTestCounter <> nTestIndex OR bOneTestDone THEN
     RETURN;
 END_IF
@@ -294,7 +299,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestMoveOk" Id="{0a0e07ec-6039-465c-88e5-a08bb2253266}">
-      <Declaration><![CDATA[METHOD TestMoveOk
+      <Declaration><![CDATA[
+METHOD TestMoveOk
 VAR_INPUT
     nTestIndex: UINT;
 END_VAR
@@ -316,9 +322,11 @@ VAR_INST
 END_VAR
 VAR CONSTANT
     END: UINT := 999;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
-        <ST><![CDATA[TEST('TestMoveOk');
+        <ST><![CDATA[
+TEST('TestMoveOk');
 IF nTestCounter <> nTestIndex OR bOneTestDone THEN
     RETURN;
 END_IF
@@ -430,7 +438,8 @@ IF nStep = END OR tonTimer.Q THEN
     );
     bOneTestDone := TRUE;
     TEST_FINISHED();
-END_IF]]></ST>
+END_IF
+]]></ST>
       </Implementation>
     </Method>
   </POU>

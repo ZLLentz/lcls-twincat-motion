@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStateMoveND_Test" Id="{b9c8729d-ba0e-45a6-b763-53e484d22a2a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionStateMoveND_Test EXTENDS FB_MotorTestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionStateMoveND_Test EXTENDS FB_MotorTestSuite
 (*
     Test that FB_PositionStateMoveND can be used to move motors to named state positions
     And that the API behaves exactly as described.
@@ -77,10 +78,12 @@ END_IF
 tonTimer(
     IN:=bStatesReady,
     PT:=T#5s,
-);]]></ST>
+);
+]]></ST>
     </Implementation>
     <Method Name="ResetGoals" Id="{596670bf-1f3d-4561-9f5d-f06c122e58e6}">
-      <Declaration><![CDATA[METHOD ResetGoals
+      <Declaration><![CDATA[
+METHOD ResetGoals
 VAR_INPUT
 END_VAR
 ]]></Declaration>
@@ -110,7 +113,8 @@ SetGoodState(astGoalPositions[3]);
       </Implementation>
     </Method>
     <Method Name="TestMove" Id="{3180ed3d-87cb-4e20-beff-2be7f8597c71}">
-      <Declaration><![CDATA[METHOD TestMove
+      <Declaration><![CDATA[
+METHOD TestMove
 VAR_INPUT
     nTestIndex: UINT;
     fMotor1Pos: LREAL;
@@ -121,9 +125,11 @@ END_VAR
 VAR_INST
     bLocalInit: BOOL;
     bInterruptStarted: BOOL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
-        <ST><![CDATA[TEST(CONCAT('TestMove', UINT_TO_STRING(nTestIndex)));
+        <ST><![CDATA[
+TEST(CONCAT('TestMove', UINT_TO_STRING(nTestIndex)));
 IF nTestCounter <> nTestIndex THEN
     RETURN;
 END_IF
@@ -184,7 +190,8 @@ IF fbMove.bDone OR tonTimer.Q OR (bInterruptStarted AND NOT fbMove.bBusy) THEN
 
     bOneTestDone := TRUE;
     TEST_FINISHED();
-END_IF]]></ST>
+END_IF
+]]></ST>
       </Implementation>
     </Method>
   </POU>

@@ -1,14 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="F_PosWithinDelta" Id="{5e4b12d9-d7b3-420d-a0c0-3caa211d85b5}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION F_PosWithinDelta : BOOL
+    <Declaration><![CDATA[
+FUNCTION F_PosWithinDelta : BOOL
 VAR_INPUT
     fPosition: LREAL;
     stPositionState: ST_PositionState;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[F_PosWithinDelta := F_PosOverLowerBound(fPosition, stPositionState) AND
-                    F_PosUnderUpperBound(fPosition, stPositionState);]]></ST>
+      <ST><![CDATA[
+F_PosWithinDelta := F_PosOverLowerBound(fPosition, stPositionState) AND
+                    F_PosUnderUpperBound(fPosition, stPositionState);
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

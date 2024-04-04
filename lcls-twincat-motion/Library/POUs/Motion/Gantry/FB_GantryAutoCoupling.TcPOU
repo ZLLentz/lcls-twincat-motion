@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_GantryAutoCoupling" Id="{532dfcaf-6187-4140-aaad-e20a9bbe6b43}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_GantryAutoCoupling
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_GantryAutoCoupling
 VAR_INPUT
     nGantryTol : LINT;
 END_VAR
@@ -25,7 +26,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Designate Master and SLave Axes
+      <ST><![CDATA[
+// Designate Master and SLave Axes
 Master.bGantryAxis := TRUE;
 Slave.bGantryAxis := TRUE;
 
@@ -63,7 +65,8 @@ bInitComplete S= bGantryAlreadyCoupled;
 
 // Decoupling with auto-reset of coupling boolean
 bExecuteDecouple R= decouple.Busy OR NOT bGantryAlreadyCoupled;
-decouple(Slave:=Slave.Axis, Execute:=bExecuteDecouple);]]></ST>
+decouple(Slave:=Slave.Axis, Execute:=bExecuteDecouple);
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

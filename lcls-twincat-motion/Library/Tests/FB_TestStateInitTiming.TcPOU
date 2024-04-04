@@ -1,22 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_TestStateInitTiming" Id="{b36fb6c3-2228-4a68-b46d-71d760d78916}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_TestStateInitTiming EXTENDS TcUnit.FB_TestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_TestStateInitTiming EXTENDS TcUnit.FB_TestSuite
 VAR
     stMotionStage: ST_MotionStage;
     fbMotionStageSim: FB_MotionStageSim;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbMotionStageSim(
+      <ST><![CDATA[
+fbMotionStageSim(
     stMotionStage:=stMotionStage,
     nEnableMode:=E_StageEnableMode.DURING_MOTION,
 );
 
-PassiveReinit();]]></ST>
+PassiveReinit();
+]]></ST>
     </Implementation>
     <Method Name="PassiveReinit" Id="{f581923a-dba2-4a92-b0c7-df2f67d53bdf}">
-      <Declaration><![CDATA[METHOD PassiveReinit : BOOL
+      <Declaration><![CDATA[
+METHOD PassiveReinit : BOOL
 VAR_INPUT
 END_VAR
 VAR_INST
@@ -46,9 +50,11 @@ VAR_INST
 
     nSetPosErrCount: UINT := 0;
     nSetPosErrorID: UDINT;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
-        <ST><![CDATA[TEST('PassiveReinit');
+        <ST><![CDATA[
+TEST('PassiveReinit');
 
 // State setup
 fbStateSetup(stPositionState:=stDefault, bSetDefault:=TRUE);

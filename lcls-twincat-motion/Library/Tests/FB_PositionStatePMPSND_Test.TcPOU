@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStatePMPSND_Test" Id="{5b25afff-6416-405d-b50f-327a73066770}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionStatePMPSND_Test EXTENDS FB_MotorTestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionStatePMPSND_Test EXTENDS FB_MotorTestSuite
 (*
     Sanity checks for the following:
     - FB_PositionStatePMPS1D
@@ -171,7 +172,8 @@ tonTimer(
 ]]></ST>
     </Implementation>
     <Method Name="AssertMotionLims" Id="{022f18ed-834d-4e54-ad88-114f4be5070a}">
-      <Declaration><![CDATA[METHOD AssertMotionLims: BOOL
+      <Declaration><![CDATA[
+METHOD AssertMotionLims: BOOL
 VAR_IN_OUT
     stMotionStage: ST_MotionStage;
     astPositionState: ARRAY[1..GeneralConstants.MAX_STATES] OF ST_PositionState;
@@ -182,7 +184,8 @@ VAR_INPUT
 END_VAR
 VAR
     nExpected: DWORD;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 IF F_AtPositionState(stMotionStage, astPositionState[eState]) THEN
@@ -208,7 +211,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="Test1D" Id="{6551b146-aecb-4933-8bfe-0515d13d519c}">
-      <Declaration><![CDATA[METHOD Test1D
+      <Declaration><![CDATA[
+METHOD Test1D
 VAR_INPUT
     nTestID: UINT;
     eState: E_TestStates;
@@ -217,7 +221,8 @@ VAR_INST
     fbFFHWO: FB_HardwareFFOutput;
     bInit: BOOL;
     bLimAsserted: BOOL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST(CONCAT('Test1D_state', UINT_TO_STRING(eState)));
@@ -310,7 +315,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="Test2D" Id="{134b433c-bcf0-4f18-831a-5eed3883fc74}">
-      <Declaration><![CDATA[METHOD Test2D
+      <Declaration><![CDATA[
+METHOD Test2D
 VAR_INPUT
     nTestID: UINT;
     eState: E_TestStates;
@@ -320,7 +326,8 @@ VAR_INST
     bInit: BOOL;
     bLimAsserted1: BOOL;
     bLimAsserted2: BOOL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST(CONCAT('Test2D_state', UINT_TO_STRING(eState)));
@@ -424,7 +431,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="Test3D" Id="{62ef1eb4-d8ea-4e70-880b-11833e41203d}">
-      <Declaration><![CDATA[METHOD Test3D
+      <Declaration><![CDATA[
+METHOD Test3D
 VAR_INPUT
     nTestID: UINT;
     eState: E_TestStates;
@@ -435,7 +443,8 @@ VAR_INST
     bLimAsserted1: BOOL;
     bLimAsserted2: BOOL;
     bLimAsserted3: BOOL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST(CONCAT('Test3D_state', UINT_TO_STRING(eState)));
@@ -551,7 +560,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestStartup1D" Id="{50795fb9-8e60-45c2-9456-13c6cf737ce0}">
-      <Declaration><![CDATA[METHOD TestStartup1D
+      <Declaration><![CDATA[
+METHOD TestStartup1D
 (*
     - On startup, there should be no move request
     - In this case, we start in an unknown state since (0, 0, 0) is not matching any state for any motor
@@ -563,7 +573,8 @@ END_VAR
 VAR_INST
     fbFFHWO: FB_HardwareFFOutput;
     bInit: BOOL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestStartup1D');
@@ -618,11 +629,13 @@ IF tonTimer.Q THEN
     );
     bOneTestDone := TRUE;
     TEST_FINISHED();
-END_IF]]></ST>
+END_IF
+]]></ST>
       </Implementation>
     </Method>
     <Method Name="TestStartup2D" Id="{b31f116a-0581-48e0-b8ce-3dda16e71cc6}">
-      <Declaration><![CDATA[METHOD TestStartup2D
+      <Declaration><![CDATA[
+METHOD TestStartup2D
 (*
     - On startup, there should be no move request
     - Starting from (0, 0, 0) all motors should only be allowed to move +
@@ -633,7 +646,8 @@ END_VAR
 VAR_INST
     fbFFHWO: FB_HardwareFFOutput;
     bInit: BOOL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestStartup2D');
@@ -701,11 +715,13 @@ IF tonTimer.Q THEN
     );
     bOneTestDone := TRUE;
     TEST_FINISHED();
-END_IF]]></ST>
+END_IF
+]]></ST>
       </Implementation>
     </Method>
     <Method Name="TestStartup3D" Id="{560c91d2-232a-4f40-9617-6a5a80e2539f}">
-      <Declaration><![CDATA[METHOD TestStartup3D
+      <Declaration><![CDATA[
+METHOD TestStartup3D
 (*
     - On startup, there should be no move request
     - Starting from (0, 0, 0) all motors should only be allowed to move +
@@ -716,7 +732,8 @@ END_VAR
 VAR_INST
     fbFFHWO: FB_HardwareFFOutput;
     bInit: BOOL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestStartup3D');
@@ -797,7 +814,8 @@ IF tonTimer.Q THEN
     );
     bOneTestDone := TRUE;
     TEST_FINISHED();
-END_IF]]></ST>
+END_IF
+]]></ST>
       </Implementation>
     </Method>
   </POU>

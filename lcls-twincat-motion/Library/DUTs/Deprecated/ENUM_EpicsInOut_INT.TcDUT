@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <DUT Name="ENUM_EpicsInOut_INT" Id="{299d5a8e-dcd1-4808-9da5-8934bf6eb172}">
-    <Declaration><![CDATA[{attribute 'obsolete' := 'Use ENUM_EpicsInOut'}
+    <Declaration><![CDATA[
+{attribute 'obsolete' := 'Use ENUM_EpicsInOut'}
 {attribute 'qualified_only'}
 // Example EPICS states enum for use in all versions of the states FBs
 // Remove strict attribute for easier handling

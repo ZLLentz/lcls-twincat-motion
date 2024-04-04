@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PerMotorFFOND" Id="{63251316-84c1-4557-ae64-15075eeb972a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PerMotorFFOND
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PerMotorFFOND
 (*
     PMPS fast faults that must be done per motor, rather than per state, based purely
     on the motor status and not other PMPS considerations.

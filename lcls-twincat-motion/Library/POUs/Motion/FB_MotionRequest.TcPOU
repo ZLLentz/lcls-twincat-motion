@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_MotionRequest" Id="{f3ce72e2-b968-4260-9a64-8e0267e89e51}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_MotionRequest
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_MotionRequest
 (*
     Request a move from an axis controlled via EPICS using FB_MotionStage
     This exists to manage situations where different bits of code may need to move the same motor.
@@ -64,7 +65,8 @@ VAR CONSTANT
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[rtExec(CLK:=bExecute);
+      <ST><![CDATA[
+rtExec(CLK:=bExecute);
 ftExec(CLK:=bExecute);
 rtReset(CLK:=bReset);
 
@@ -170,7 +172,8 @@ INIT, WAIT_EXEC, ERROR:
     bBusy := FALSE;
 ELSE
     bBusy := TRUE;
-END_CASE]]></ST>
+END_CASE
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

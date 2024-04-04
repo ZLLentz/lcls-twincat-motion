@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStatePMPS1D_InOut" Id="{77746f1a-8f5a-49b7-94c5-980bd0e96927}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionStatePMPS1D_InOut
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionStatePMPS1D_InOut
 (*
     An example and usable drop-in instance for a 1D pmps state device with just an IN and an OUT state.
     Note that the outward-facing API is nearly identical to the non-PMPS version
@@ -70,7 +71,8 @@ fbPositionStatePMPS1D(
 
 // Send updates made on the array back to the inputs (VAR_IN_OUT) for maximum clarity
 stOut := astPositionState[E_EpicsInOut.OUT];
-stIn := astPositionState[E_EpicsInOut.IN];]]></ST>
+stIn := astPositionState[E_EpicsInOut.IN];
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

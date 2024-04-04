@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionState3D" Id="{eb582aca-9c78-4511-9c28-b4749e72999a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionState3D
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionState3D
 (*
     3-Dimensional position state function block.
 

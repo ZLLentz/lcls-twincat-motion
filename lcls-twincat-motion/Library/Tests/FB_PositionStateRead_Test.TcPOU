@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStateRead_Test" Id="{5aa06afc-15a8-4899-b127-6c473eb50869}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionStateRead_Test EXTENDS TcUnit.FB_TestSuite
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionStateRead_Test EXTENDS TcUnit.FB_TestSuite
 (*
     Test that FB_PositionStateRead works exactly how it should
     according to its API during normal and failure states.
@@ -136,7 +137,8 @@ END_IF
 ]]></ST>
     </Implementation>
     <Method Name="Asserts" Id="{9a2b93ac-1d78-442c-a37b-5d49647c861f}">
-      <Declaration><![CDATA[METHOD PRIVATE Asserts
+      <Declaration><![CDATA[
+METHOD PRIVATE Asserts
 VAR_INPUT
     tTimeout: TIME;
     bKnownState: BOOL;
@@ -197,13 +199,15 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestDupe" Id="{8e062161-194d-4cd6-b414-bf7127fab9cd}">
-      <Declaration><![CDATA[METHOD TestDupe
+      <Declaration><![CDATA[
+METHOD TestDupe
 VAR_INPUT
     nTestIndex: DINT;
 END_VAR
 VAR
     abExpected: ARRAY[1..GeneralConstants.MAX_STATES] OF BOOL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
       <Implementation>
         <ST><![CDATA[
 TEST('TestDupe');
@@ -250,7 +254,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestMovingPosition" Id="{718d69e0-eec5-43ac-85a7-32e459f1fdac}">
-      <Declaration><![CDATA[METHOD PRIVATE TestMovingPosition
+      <Declaration><![CDATA[
+METHOD PRIVATE TestMovingPosition
 VAR_INPUT
     nTestIndex: UINT;
     sTestName: STRING;
@@ -294,7 +299,8 @@ END_IF
       </Implementation>
     </Method>
     <Method Name="TestStaticPosition" Id="{1757b5fc-f3f6-4976-b181-53e15896a6a6}">
-      <Declaration><![CDATA[METHOD PRIVATE TestStaticPosition
+      <Declaration><![CDATA[
+METHOD PRIVATE TestStaticPosition
 VAR_INPUT
     nTestIndex: UINT;
     sTestName: STRING;

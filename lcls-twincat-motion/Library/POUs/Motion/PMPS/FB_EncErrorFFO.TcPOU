@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_EncErrorFFO" Id="{a91d9283-56e2-4ee3-a9ad-c1d01374f94c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_EncErrorFFO
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_EncErrorFFO
 (*
     Example usage of FB_NCErrorFFO that only counts encoder errors as faults.
 *)
@@ -29,12 +30,14 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbNCErrorFFO(
+      <ST><![CDATA[
+fbNCErrorFFO(
     stMotionStage := stMotionStage,
     fbFFHWO := fbFFHWO,
     bReset := bReset,
     bAutoReset := bAutoReset,
-    bTripped => bTripped);]]></ST>
+    bTripped => bTripped);
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

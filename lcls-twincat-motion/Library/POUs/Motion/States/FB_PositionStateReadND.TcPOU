@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PositionStateReadND" Id="{3c302874-e55d-4c41-bc18-ae389049a346}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_PositionStateReadND
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FB_PositionStateReadND
 (*
     Function block to get the combined N-dimensional state of a group of motors.
     It is a building block not meant for use outside of lcls-twintcat-motion.
@@ -36,7 +37,8 @@ VAR
 
     nIter: UINT;
     nIter2: UINT;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[
 CheckCount();
