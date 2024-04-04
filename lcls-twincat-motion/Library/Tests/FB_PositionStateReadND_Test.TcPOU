@@ -240,7 +240,6 @@ fbRead(
     astPositionState:=astPositionState,
     nActiveMotorCount:=3,
 );
-
 ]]></ST>
       </Implementation>
     </Method>

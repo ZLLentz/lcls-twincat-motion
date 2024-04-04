@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_MotionStage" Id="{137c52b5-8983-4728-b719-31601503f20a}" SpecialFunc="None">
     <Declaration><![CDATA[
